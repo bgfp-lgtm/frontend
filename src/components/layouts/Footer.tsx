@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -13,9 +15,13 @@ export default function Footer() {
     >
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-300">
         <div>
-          <h3 className="font-bold text-lg">LET'S TURN YOUR IDEAS INTO REALITY</h3>
+          <h3 className="font-bold text-lg">
+            LET'S TURN YOUR IDEAS INTO REALITY
+          </h3>
           <p className="mt-3 text-sm">
-            Email: hello@example.com<br />Phone: +1 234 567 890
+            Email: hello@example.com
+            <br />
+            Phone: +1 234 567 890
           </p>
         </div>
         <div>
