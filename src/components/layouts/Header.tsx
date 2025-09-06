@@ -18,16 +18,16 @@ export default function Header({}: Props) {
         />
       </Link>
       <div className="flex items-center justify-between gap-10">
-        <p className="text-md font-medium cursor-pointer hover:text-red-500">
+        <p className="text-lg font-semibold cursor-pointer hover:text-red-500">
           Services
         </p>
-        <p className="text-md font-medium cursor-pointer hover:text-red-500">
+        <p className="text-lg font-semibold cursor-pointer hover:text-red-500">
           About us
         </p>
-        <p className="text-md font-medium cursor-pointer hover:text-red-500">
+        <p className="text-lg font-semibold cursor-pointer hover:text-red-500">
           Projects
         </p>
-        <p className="text-md font-medium cursor-pointer hover:text-red-500">
+        <p className="text-lg font-semibold cursor-pointer hover:text-red-500">
           Blog Posts
         </p>
       </div>

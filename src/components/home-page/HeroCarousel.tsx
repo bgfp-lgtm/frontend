@@ -56,8 +56,8 @@ function HeroCarousel({}: Props) {
         </CarouselContent>
 
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4">
-          <CarouselPrevious className="bg-black/40 hover:bg-black/60 border-none text-yellow-400 hover:text-yellow-300 rounded-full h-9 w-9" />
-          <CarouselNext className="bg-black/40 hover:bg-black/60 border-none text-yellow-400 hover:text-yellow-300 rounded-full h-9 w-9" />
+          <CarouselPrevious className="bg-black/40 hover:bg-black/60 border-none  text-red-500 hover:text-red-300 cursor-pointer rounded-full h-9 w-9" />
+          <CarouselNext className="bg-black/40 hover:bg-black/60 border-none  text-red-500 hover:text-red-300 cursor-pointer rounded-full h-9 w-9" />
         </div>
       </Carousel>
     </div>

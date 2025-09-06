@@ -21,8 +21,8 @@ export default function HeroSection({}: Props) {
             audiences and achieve unforgettable results for your brand.
           </p>
 
-          <p className="flex items-center gap-1 text-lg hover:text-red-500 cursor-pointer group">
-            See More{" "}
+          <p className="flex items-center font-bold gap-1 text-lg hover:text-red-500 cursor-pointer group">
+            See More
             <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1">
               <MdArrowOutward />
             </span>
