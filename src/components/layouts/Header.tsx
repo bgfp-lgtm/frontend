@@ -1,49 +1,39 @@
+import Image from "next/image";
 import React from "react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="fixed w-full z-40 backdrop-blur-md bg-black/40">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold tracking-wide">
-          VSP<span className="text-red-400">.</span>
-        </a>
-        <nav className="hidden md:flex gap-6 items-center text-sm">
-          <a href="#projects" className="hover:underline">
-            Latest Projects
-          </a>
-          <a href="#services" className="hover:underline">
-            Services
-          </a>
-          <a href="#about" className="hover:underline">
-            About
-          </a>
-          <a
-            href="#contact"
-            className="px-4 py-2 border border-gray-700 rounded hover:bg-white/5"
-          >
-            Contact
-          </a>
-        </nav>
-        <button className="md:hidden p-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+    <div className="flex items-center justify-between px-20 py-10">
+      <Link href={"/"}>
+        <Image
+          src={"/logo.png"}
+          alt="logo"
+          width={160}
+          height={160}
+          className=""
+        />
+      </Link>
+      <div className="flex items-center justify-between gap-10">
+        <p className="text-md font-medium cursor-pointer hover:text-red-500">
+          Services
+        </p>
+        <p className="text-md font-medium cursor-pointer hover:text-red-500">
+          About us
+        </p>
+        <p className="text-md font-medium cursor-pointer hover:text-red-500">
+          Projects
+        </p>
+        <p className="text-md font-medium cursor-pointer hover:text-red-500">
+          Blog Posts
+        </p>
       </div>
-    </header>
+      <Button className="p-7 rounded-xl text-xl bg-red-500/8 text-red-500 cursor-pointer">
+        Contact
+      </Button>
+    </div>
   );
 }
-1;

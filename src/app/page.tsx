@@ -1,12 +1,12 @@
-import Footer from "@/components/layouts/Footer";
-import Header from "@/components/layouts/Header";
-import Image from "next/image";
+import HeroSection from "@/components/home-page/HeroSection";
+import React from "react";
 
-export default function Home() {
+type Props = {};
+
+export default function Home({}: Props) {
   return (
-    <div className="">
-      <Header />
-      <Footer />
+    <div>
+      <HeroSection />
     </div>
   );
 }
