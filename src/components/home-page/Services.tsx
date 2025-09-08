@@ -88,14 +88,7 @@ export default function Services({}: Props) {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -131,6 +124,7 @@ export default function Services({}: Props) {
             <motion.div
               key={service.id}
               variants={itemVariants}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="group relative bg-white cursor-pointer rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               {/* Image Container */}
