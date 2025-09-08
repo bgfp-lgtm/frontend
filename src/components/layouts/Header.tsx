@@ -2,11 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -22,13 +25,15 @@ export default function App() {
 
   const navLinks = [
     { href: "#services", text: "Services" },
-    { href: "#about", text: "About us" },
+    { href: "/about-us", text: "About us" },
     { href: "#projects", text: "Projects" },
     { href: "#blog", text: "Blog Posts" },
   ];
 
   return (
-    <header className="relative w-full bg-black">
+    <header
+      className={`relative w-full ${isHomePage ? "bg-black" : "bg-white"}`}
+    >
       <div className="flex items-center justify-between px-4 sm:px-8 lg:px-20 py-5">
         <Link href={"/"}>
           <Image
@@ -41,15 +46,22 @@ export default function App() {
         </Link>
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center justify-center gap-8 xl:gap-10">
-          {navLinks.map((link) => (
-            <Link
-              key={link.text}
-              href={link.href}
-              className="text-sm font-medium text-white transition-colors duration-300 hover:text-red-500"
-            >
-              {link.text}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || 
+              (link.href.startsWith('#') && pathname === '/');
+            
+            return (
+              <Link
+                key={link.text}
+                href={link.href}
+                className={`text-sm transition-colors duration-300 hover:text-red-500 ${
+                  isHomePage ? "text-white" : "text-gray-800"
+                } ${isActive ? "font-semibold" : "font-medium"}`}
+              >
+                {link.text}
+              </Link>
+            );
+          })}
         </nav>
 
         <button className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-red-500/20 text-red-600 transition-colors duration-300 hover:bg-red-200 cursor-pointer">
@@ -60,7 +72,9 @@ export default function App() {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
-            className="p-2 text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500"
+            className={`p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500 ${
+              isHomePage ? "text-white" : "text-gray-700"
+            }`}
           >
             {isMenuOpen ? (
               <RxCross2 className="h-6 w-6" />
@@ -85,16 +99,23 @@ export default function App() {
             <RxCross2 className="h-8 w-8" />
           </button>
 
-          {navLinks.map((link) => (
-            <Link
-              key={link.text}
-              href={link.href}
-              className="text-2xl font-semibold text-gray-800 hover:text-red-500"
-              onClick={() => setIsMenuOpen(false)} // Close menu on link click
-            >
-              {link.text}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || 
+              (link.href.startsWith('#') && pathname === '/');
+            
+            return (
+              <Link
+                key={link.text}
+                href={link.href}
+                className={`text-2xl text-gray-800 hover:text-red-500 ${
+                  isActive ? "font-bold" : "font-semibold"
+                }`}
+                onClick={() => setIsMenuOpen(false)} // Close menu on link click
+              >
+                {link.text}
+              </Link>
+            );
+          })}
 
           <button
             className="mt-6 inline-flex items-center justify-center px-8 py-4 rounded-xl text-xl font-semibold bg-red-500 text-white transition-colors duration-300 hover:bg-red-600 cursor-pointer"
