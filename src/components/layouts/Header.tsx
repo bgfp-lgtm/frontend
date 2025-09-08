@@ -28,31 +28,31 @@ export default function App() {
   ];
 
   return (
-    <header className="relative w-full bg-white">
+    <header className="relative w-full bg-black">
       <div className="flex items-center justify-between px-4 sm:px-8 lg:px-20 py-5">
         <Link href={"/"}>
           <Image
             src={"/logo.png"}
             alt="logo"
-            width={160}
-            height={160}
+            width={130}
+            height={130}
             className=""
           />
         </Link>
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center justify-center gap-8 xl:gap-10">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.text}
               href={link.href}
-              className="text-lg font-medium text-gray-700 transition-colors duration-300 hover:text-red-500"
+              className="text-sm font-medium text-white transition-colors duration-300 hover:text-red-500"
             >
               {link.text}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        <button className="hidden lg:inline-flex items-center justify-center px-6 py-3 rounded-xl text-lg font-semibold bg-red-100 text-red-600 transition-colors duration-300 hover:bg-red-200 cursor-pointer">
+        <button className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-red-500/20 text-red-600 transition-colors duration-300 hover:bg-red-200 cursor-pointer">
           Contact
         </button>
 
