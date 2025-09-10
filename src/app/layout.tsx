@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import Header from "@/components/layouts/Header";
+import Footer from "@/components/layouts/Footer";
 
 export const metadata: Metadata = {
   title: "Birthgiver Film Productions",
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

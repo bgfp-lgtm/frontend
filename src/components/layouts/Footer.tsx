@@ -2,52 +2,108 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { BsInstagram, BsYoutube, BsFacebook, BsLinkedin } from "react-icons/bs";
 
 export default function Footer() {
   return (
     <motion.footer
       id="contact"
-      className="py-16 bg-gray-900"
-      initial={{ opacity: 0, y: 40 }}
+      className="relative bg-gray-950 text-gray-300"
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-300">
-        <div>
-          <h3 className="font-bold text-xl text-white mb-4">
-            Birthgiver Film Productions
-          </h3>
-          <p className="text-gray-400 mb-4">
-            Bringing your vision to life through creative storytelling and high-quality cinematography.
-          </p>
-          <p className="text-sm">
-            Email: hello@birthgiverfilms.com
-            <br />
-            Phone: +1 (555) 123-4567
-          </p>
-        </div>
-        <div>
-          <h4 className="font-semibold text-white mb-4">Services</h4>
-          <ul className="text-sm space-y-2">
-            <li className="hover:text-red-500 cursor-pointer transition-colors">Video Production</li>
-            <li className="hover:text-red-500 cursor-pointer transition-colors">Post-Production</li>
-            <li className="hover:text-red-500 cursor-pointer transition-colors">Creative Direction</li>
-            <li className="hover:text-red-500 cursor-pointer transition-colors">Live Event Coverage</li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-semibold text-white mb-4">Connect</h4>
-          <ul className="text-sm space-y-2">
-            <li className="hover:text-red-500 cursor-pointer transition-colors">Instagram</li>
-            <li className="hover:text-red-500 cursor-pointer transition-colors">Facebook</li>
-            <li className="hover:text-red-500 cursor-pointer transition-colors">YouTube</li>
-            <li className="hover:text-red-500 cursor-pointer transition-colors">LinkedIn</li>
-          </ul>
-        </div>
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
+        <div className="absolute -top-24 right-0 w-72 h-72 rounded-full bg-red-600/10 blur-3xl" />
       </div>
-      <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Birthgiver Film Productions. All rights reserved.
+
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div>
+            <h3 className="text-white text-2xl font-bold tracking-wide mb-3">
+              Birthgiver
+            </h3>
+            <p className="text-gray-400 leading-relaxed mb-6 max-w-sm">
+              Cinematic storytelling from concept to screen. We craft compelling visuals that move audiences and grow brands.
+            </p>
+            <div className="flex items-center gap-4 text-gray-400">
+              <a href="#" aria-label="Instagram" className="hover:text-white transition-colors">
+                <BsInstagram className="w-5 h-5" />
+              </a>
+              <a href="#" aria-label="YouTube" className="hover:text-white transition-colors">
+                <BsYoutube className="w-5 h-5" />
+              </a>
+              <a href="#" aria-label="Facebook" className="hover:text-white transition-colors">
+                <BsFacebook className="w-5 h-5" />
+              </a>
+              <a href="#" aria-label="LinkedIn" className="hover:text-white transition-colors">
+                <BsLinkedin className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-4">Services</h4>
+            <ul className="space-y-2 text-sm">
+              <li className="hover:text-white transition-colors">Development</li>
+              <li className="hover:text-white transition-colors">Pre-Production</li>
+              <li className="hover:text-white transition-colors">Production</li>
+              <li className="hover:text-white transition-colors">Post-Production</li>
+              <li className="hover:text-white transition-colors">Marketing & Digital</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-4">Company</h4>
+            <ul className="space-y-2 text-sm">
+              <li className="hover:text-white transition-colors">About Us</li>
+              <li className="hover:text-white transition-colors">Our Work</li>
+              <li className="hover:text-white transition-colors">Careers</li>
+              <li className="hover:text-white transition-colors">Contact</li>
+              <li className="hover:text-white transition-colors">FAQs</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-4">Stay in the loop</h4>
+            <p className="text-gray-400 text-sm mb-4">
+              Get updates on new releases, behind-the-scenes, and exclusive offers.
+            </p>
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="flex items-center gap-2"
+            >
+              <input
+                type="email"
+                required
+                aria-label="Email address"
+                placeholder="Your email address"
+                className="w-full rounded-md bg-gray-900 border border-gray-800 px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
+              />
+              <button
+                type="submit"
+                className="rounded-md bg-red-600 hover:bg-red-700 text-white px-4 py-3 text-sm font-medium transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
+
+            <p className="mt-3 text-xs text-gray-500">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+          <div>© {new Date().getFullYear()} Birthgiver Film Productions</div>
+          <ul className="flex items-center gap-6">
+            <li className="hover:text-white transition-colors"><a href="#">Privacy</a></li>
+            <li className="hover:text-white transition-colors"><a href="#">Terms</a></li>
+            <li className="hover:text-white transition-colors"><a href="#">Cookies</a></li>
+          </ul>
+        </div>
       </div>
     </motion.footer>
   );
