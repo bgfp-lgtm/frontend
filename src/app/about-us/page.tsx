@@ -70,29 +70,53 @@ export default function About({}: Props) {
       transition={{ duration: 0.6 }}
       className="p-8 md:p-20 w-full"
     >
-      <motion.header 
-        initial={{ opacity: 0, y: 40 }}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="text-center mb-20 md:mb-40"
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative mb-16 md:mb-28"
       >
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="text-4xl md:text-8xl font-bold"
-        >
-          About <span className="text-red-500">BGFP</span>
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-          className="text-lg md:text-xl text-gray-600 mt-6 max-w-3xl mx-auto"
-        >
-          Meet the visionary leaders driving innovation in film production
-        </motion.p>
-      </motion.header>
+        <div className="px-6 md:px-12">
+          <div className="max-w-5xl mx-auto text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+              className="text-4xl md:text-7xl font-bold tracking-tight text-gray-900"
+            >
+              Birthgiver Film Productions
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              className="mt-5 mx-auto max-w-3xl text-base md:text-xl leading-relaxed text-gray-600"
+            >
+              A studio built to take ideas from spark to screen. We blend
+              cinematic craft with technology and strategy—covering film production,
+              software development, and marketing—so your story is developed, produced,
+              and launched with impact.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.35 }}
+              className="mt-8 flex flex-wrap items-center justify-center gap-3"
+            >
+              <span className="px-3 py-1 rounded-full text-sm font-medium bg-red-50 text-red-700 border border-red-100">
+                End‑to‑end production
+              </span>
+              <span className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800 border border-gray-200">
+                Software & platforms
+              </span>
+              <span className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800 border border-gray-200">
+                Marketing & launch
+              </span>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
 
       <div className="w-full flex flex-col gap-20 md:gap-40">
         {teamMembers.map((member, index) => (

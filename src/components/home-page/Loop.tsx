@@ -9,6 +9,10 @@ const techLogos = [
   { src: "/netflix.png", alt: "Netflix", title: "Netflix" },
   { src: "/kia.png", alt: "Kia", title: "Kia" },
   { src: "/absolut.png", alt: "Absolut", title: "Absolut" },
+  { src: "/Oriflame-01.png", alt: "oriflame", title: "oriflame" },
+  { src: "/renault.png", alt: "oriflame", title: "oriflame" },
+  { src: "/sony.svg", alt: "oriflame", title: "oriflame" },
+  { src: "/idbi.png", alt: "oriflame", title: "oriflame" },
 ];
 
 export default function Loop({}: Props) {

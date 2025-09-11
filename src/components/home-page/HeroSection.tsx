@@ -19,7 +19,7 @@ export default function HeroSection({}: Props) {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
             className="text-white text-4xl sm:text-5xl md:text-9xl font-bold mb-4 tracking-wider leading-tight"
           >
-            Birthgiver Film Productions
+            BirthGiver Film Productions
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

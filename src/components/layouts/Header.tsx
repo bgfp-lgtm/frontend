@@ -24,10 +24,10 @@ export default function App() {
   }, [isMenuOpen]);
 
   const navLinks = [
-    { href: "#services", text: "Services" },
+    { href: "/services", text: "Services" },
     { href: "/about-us", text: "About us" },
-    { href: "#projects", text: "Projects" },
-    { href: "#blog", text: "Blog Posts" },
+    { href: "/projects", text: "Projects" },
+    { href: "/blog", text: "Blog Posts" },
   ];
 
   return (
@@ -64,9 +64,9 @@ export default function App() {
           })}
         </nav>
 
-        <button className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-red-500/20 text-red-600 transition-colors duration-300 hover:bg-red-200 cursor-pointer">
+        <Link href="/contact" className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-red-500/20 text-red-600 transition-colors duration-300 hover:bg-red-200 cursor-pointer">
           Contact
-        </button>
+        </Link>
 
         <div className="lg:hidden">
           <button
@@ -117,12 +117,13 @@ export default function App() {
             );
           })}
 
-          <button
+          <Link
+            href="/contact"
             className="mt-6 inline-flex items-center justify-center px-8 py-4 rounded-xl text-xl font-semibold bg-red-500 text-white transition-colors duration-300 hover:bg-red-600 cursor-pointer"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
-          </button>
+          </Link>
         </div>
       </div>
     </header>
