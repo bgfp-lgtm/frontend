@@ -27,14 +27,6 @@ type Props = {};
 export default function Services({}: Props) {
   const services: ServiceItem[] = [
     {
-      id: 1,
-      title: "Software & Development",
-      description:
-        "Strategic project development from concept to completion. We bring your ideas to life with comprehensive planning and execution.",
-      image: "/d.jpg",
-      icon: <BsLightbulb className="w-5 h-5" />,
-    },
-    {
       id: 2,
       title: "End-to-End Film Production",
       description:
@@ -42,7 +34,14 @@ export default function Services({}: Props) {
       image: "/pp.jpg",
       icon: <BsClipboardData className="w-5 h-5" />,
     },
-
+    {
+      id: 1,
+      title: "Software & Development",
+      description:
+        "Strategic project development from concept to completion. We bring your ideas to life with comprehensive planning and execution.",
+      image: "/d.jpg",
+      icon: <BsLightbulb className="w-5 h-5" />,
+    },
     {
       id: 5,
       title: "Marketing & Strategy",
@@ -113,7 +112,7 @@ export default function Services({}: Props) {
                   alt={service.title}
                   width={400}
                   height={300}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover transition-all duration-500"
                 />
 
                 {/* Icon Overlay */}
