@@ -132,7 +132,10 @@ export default function Services({}: Props) {
 
                 {/* Learn More Button */}
                 {service.title === "Software & Development" ? (
-                  <Link href="/software-development" className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center">
+                  <Link
+                    href="/software-development"
+                    className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center"
+                  >
                     Learn More
                     <svg
                       className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
@@ -149,7 +152,10 @@ export default function Services({}: Props) {
                     </svg>
                   </Link>
                 ) : service.title === "End-to-End Film Production" ? (
-                  <Link href="/film-production" className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center">
+                  <Link
+                    href="/film-production"
+                    className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center"
+                  >
                     Learn More
                     <svg
                       className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
@@ -166,7 +172,10 @@ export default function Services({}: Props) {
                     </svg>
                   </Link>
                 ) : service.title === "Marketing & Strategy" ? (
-                  <Link href="/marketing-strategy" className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center">
+                  <Link
+                    href="/marketing-strategy"
+                    className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center"
+                  >
                     Learn More
                     <svg
                       className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
