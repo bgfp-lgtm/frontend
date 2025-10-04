@@ -35,20 +35,20 @@ export default function Services({}: Props) {
       icon: <BsClipboardData className="w-5 h-5" />,
     },
     {
-      id: 1,
-      title: "Software & Development",
-      description:
-        "Strategic project development from concept to completion. We bring your ideas to life with comprehensive planning and execution.",
-      image: "/d.jpg",
-      icon: <BsLightbulb className="w-5 h-5" />,
-    },
-    {
       id: 5,
       title: "Marketing & Strategy",
       description:
         "Comprehensive digital marketing strategies, social media management, and content marketing to amplify your brand reach.",
       image: "/dm.jpg",
       icon: <BsMegaphone className="w-5 h-5" />,
+    },
+    {
+      id: 1,
+      title: "Software & Website Development",
+      description:
+        "Strategic project development from concept to completion. We bring your ideas to life with comprehensive planning and execution.",
+      image: "/d.jpg",
+      icon: <BsLightbulb className="w-5 h-5" />,
     },
   ];
 
@@ -88,7 +88,8 @@ export default function Services({}: Props) {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="text-lg text-gray-600 mb-12 max-w-2xl"
         >
-          We offer comprehensive creative services to bring your vision to life
+          We brought brands like Suzuki & Adidas to the screen. Now, we’re doing
+          the same for businesses like yours.
         </motion.p>
 
         <motion.div

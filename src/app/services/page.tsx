@@ -6,84 +6,6 @@ import { FaCode, FaVideo, FaChartLine, FaArrowRight } from "react-icons/fa";
 export default function ServicesPage() {
   const services = [
     {
-      title: "Software & Development",
-      description:
-        "Strategic project development from concept to completion. We bring your ideas to life with comprehensive planning and execution.",
-      href: "/software-development",
-      video: "/coding.mp4",
-      icon: FaCode,
-      color: "from-blue-500 to-purple-600",
-      image:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1527430253228-e93688616381?q=80&w=1200&auto=format&fit=crop",
-      ],
-      subServices: [
-        {
-          name: "Concept Creation",
-          description:
-            "Transform your ideas into viable software concepts with strategic planning.",
-        },
-        {
-          name: "Scriptwriting",
-          description:
-            "Create comprehensive technical specifications and user stories.",
-        },
-        {
-          name: "Feasibility Analysis",
-          description:
-            "Evaluate technical feasibility, market potential, and resource requirements.",
-        },
-        {
-          name: "Funding Strategy",
-          description:
-            "Develop funding strategies and pitch materials for investment.",
-        },
-        {
-          name: "Team Assembly",
-          description:
-            "Build and manage development teams with the right expertise.",
-        },
-        {
-          name: "Project Management",
-          description: "Oversee project execution with agile methodologies.",
-        },
-        {
-          name: "Website Creation",
-          description:
-            "Design and develop professional websites for your brand.",
-        },
-        {
-          name: "Streaming Integration",
-          description:
-            "Integrate streaming capabilities and real-time features.",
-        },
-        {
-          name: "Mobile App Development",
-          description: "Build native and cross-platform mobile applications.",
-        },
-        {
-          name: "UI/UX Design",
-          description:
-            "Design intuitive user interfaces and exceptional experiences.",
-        },
-        {
-          name: "EPK Hosting",
-          description: "Create and host electronic press kits for marketing.",
-        },
-        {
-          name: "Rights Acquisition",
-          description:
-            "Handle intellectual property rights and legal documentation.",
-        },
-      ],
-    },
-    {
       title: "End-to-End Film Production",
       description:
         "Thorough pre-production planning including scriptwriting, storyboarding, casting, and location scouting for seamless execution.",
@@ -216,12 +138,90 @@ export default function ServicesPage() {
         },
       ],
     },
+    {
+      title: "Software & Development",
+      description:
+        "Strategic project development from concept to completion. We bring your ideas to life with comprehensive planning and execution.",
+      href: "/software-development",
+      video: "/coding.mp4",
+      icon: FaCode,
+      color: "from-blue-500 to-purple-600",
+      image:
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop",
+      images: [
+        "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1527430253228-e93688616381?q=80&w=1200&auto=format&fit=crop",
+      ],
+      subServices: [
+        {
+          name: "Concept Creation",
+          description:
+            "Transform your ideas into viable software concepts with strategic planning.",
+        },
+        {
+          name: "Scriptwriting",
+          description:
+            "Create comprehensive technical specifications and user stories.",
+        },
+        {
+          name: "Feasibility Analysis",
+          description:
+            "Evaluate technical feasibility, market potential, and resource requirements.",
+        },
+        {
+          name: "Funding Strategy",
+          description:
+            "Develop funding strategies and pitch materials for investment.",
+        },
+        {
+          name: "Team Assembly",
+          description:
+            "Build and manage development teams with the right expertise.",
+        },
+        {
+          name: "Project Management",
+          description: "Oversee project execution with agile methodologies.",
+        },
+        {
+          name: "Website Creation",
+          description:
+            "Design and develop professional websites for your brand.",
+        },
+        {
+          name: "Streaming Integration",
+          description:
+            "Integrate streaming capabilities and real-time features.",
+        },
+        {
+          name: "Mobile App Development",
+          description: "Build native and cross-platform mobile applications.",
+        },
+        {
+          name: "UI/UX Design",
+          description:
+            "Design intuitive user interfaces and exceptional experiences.",
+        },
+        {
+          name: "EPK Hosting",
+          description: "Create and host electronic press kits for marketing.",
+        },
+        {
+          name: "Rights Acquisition",
+          description:
+            "Handle intellectual property rights and legal documentation.",
+        },
+      ],
+    },
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+      <div className="relative h-screen overflow-hidden">
         <video
           autoPlay
           loop
@@ -240,7 +240,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Services Section */}
-      <div className="w-full px-4 md:px-20 py-16 mt-24 md:mt-40 lg:mt-56 mb-20">
+      <div className="w-full px-4 md:px-20 py-16  mb-20">
         <div className="w-full mx-auto">
           <div className="space-y-16">
             {services.map((service, index) => (

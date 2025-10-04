@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
 import LogoLoop from "../LogoLoop";
 
 type Props = {};
@@ -15,34 +17,160 @@ const techLogos = [
   { src: "/idbi.png", alt: "oriflame", title: "oriflame" },
 ];
 
+// Counting animation component
+const CountingNumber = ({
+  end,
+  duration = 2000,
+  suffix = "",
+  className = "",
+}: {
+  end: number;
+  duration?: number;
+  suffix?: string;
+  className?: string;
+}) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime: number;
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(easeOutQuart * end);
+
+      setCount(currentCount);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [isVisible, end, duration]);
+
+  return (
+    <div ref={ref} className={className}>
+      {count}
+      {suffix}
+    </div>
+  );
+};
+
 export default function Loop({}: Props) {
   return (
-    <section className="w-full py-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12 lg:mb-20">
-        <div className="text-center mb-20">
-          <p className="text-xs uppercase tracking-widest text-gray-500">
+    <section className="w-full py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12">
+        <div className="text-center mb-16">
+          <p className="text-sm uppercase tracking-widest text-blue-600 dark:text-blue-400 font-medium">
             Our collaborations
           </p>
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white mt-2">
-            Brands we’ve collaborated with
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
+            Trusted by Leading Brands
           </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            We've partnered with industry leaders across the globe to deliver
+            exceptional results
+          </p>
         </div>
 
-        <div className="relative overflow-hidden" style={{ height: 100 }}>
+        {/* Enhanced statistics section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="text-center group">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100 dark:border-gray-700">
+              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                <CountingNumber
+                  end={150}
+                  duration={2500}
+                  suffix="+"
+                  className="inline-block"
+                />
+              </div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">
+                Trusted Brands
+              </div>
+            </div>
+          </div>
+          <div className="text-center group">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100 dark:border-gray-700">
+              <div className="text-4xl md:text-5xl font-bold text-green-600 dark:text-green-400 mb-2">
+                <CountingNumber
+                  end={15}
+                  duration={2000}
+                  suffix="+"
+                  className="inline-block"
+                />
+              </div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">
+                Countries
+              </div>
+            </div>
+          </div>
+          <div className="text-center group">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100 dark:border-gray-700">
+              <div className="text-4xl md:text-5xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+                <CountingNumber
+                  end={12}
+                  duration={1800}
+                  className="inline-block"
+                />
+              </div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">
+                Years in the Game
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Enhanced brands section */}
+        <div className="relative">
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+              Our Brand Partners
+            </h3>
+          </div>
+
           <div
-            className="opacity-80 hover:opacity-100 transition-opacity duration-300"
-            style={{ filter: "grayscale(100%)" }}
+            className="relative overflow-hidden rounded-2xl bg-white "
+            style={{ height: 140 }}
           >
-            <LogoLoop
-              logos={techLogos}
-              speed={60}
-              direction="left"
-              logoHeight={56}
-              gap={56}
-              pauseOnHover
-              fadeOut
-              ariaLabel="Collaborated brands"
-            />
+            <div className="absolute inset-0  dark:from-gray-800 dark:to-gray-700 opacity-50"></div>
+            <div className="relative z-10 h-full flex items-center">
+              <div className="opacity-90 hover:opacity-100 transition-opacity duration-300">
+                <LogoLoop
+                  logos={techLogos}
+                  speed={50}
+                  direction="left"
+                  logoHeight={70}
+                  gap={60}
+                  pauseOnHover
+                  fadeOut
+                  ariaLabel="Collaborated brands"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

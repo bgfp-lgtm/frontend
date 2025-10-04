@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
+import { motion } from "framer-motion";
 import CTASection from "@/components/CTASection";
 
 export default function ProjectsPage() {
@@ -30,11 +31,45 @@ export default function ProjectsPage() {
 
   return (
     <div>
+      {/* Hero Section with Video */}
+      <div className="relative h-screen overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/about.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-6xl font-bold mb-4"
+            >
+              Our Projects
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg md:text-xl max-w-3xl mx-auto"
+            >
+              Discover our portfolio of creative projects and see the impact of our work
+            </motion.p>
+          </div>
+        </div>
+      </div>
+
       <div className="w-full px-4 md:px-20 py-16">
         <div className="max-w-6xl mx-auto">
           <div className="mb-10 text-center">
-            <h1 className="text-3xl md:text-5xl font-bold">Projects</h1>
-            <p className="text-gray-600 mt-3">Hover over a project to play the video.</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+            <p className="text-gray-600">Hover over a project to play the video.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

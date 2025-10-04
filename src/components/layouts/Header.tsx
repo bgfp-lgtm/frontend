@@ -24,9 +24,11 @@ export default function App() {
   }, [isMenuOpen]);
 
   const navLinks = [
+    { href: "/", text: "Home" },
     { href: "/services", text: "Services" },
     { href: "/about-us", text: "About us" },
     { href: "/projects", text: "Projects" },
+    { href: "/careers", text: "Careers" },
     { href: "/blog", text: "Blog Posts" },
   ];
 
@@ -47,9 +49,10 @@ export default function App() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center justify-center gap-8 xl:gap-10">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href || 
-              (link.href.startsWith('#') && pathname === '/');
-            
+            const isActive =
+              pathname === link.href ||
+              (link.href.startsWith("#") && pathname === "/");
+
             return (
               <Link
                 key={link.text}
@@ -64,7 +67,10 @@ export default function App() {
           })}
         </nav>
 
-        <Link href="/contact" className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-red-500/20 text-red-600 transition-colors duration-300 hover:bg-red-200 cursor-pointer">
+        <Link
+          href="/contact"
+          className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-red-500/20 text-red-600 transition-colors duration-300 hover:bg-red-200 cursor-pointer"
+        >
           Contact
         </Link>
 
@@ -100,9 +106,10 @@ export default function App() {
           </button>
 
           {navLinks.map((link) => {
-            const isActive = pathname === link.href || 
-              (link.href.startsWith('#') && pathname === '/');
-            
+            const isActive =
+              pathname === link.href ||
+              (link.href.startsWith("#") && pathname === "/");
+
             return (
               <Link
                 key={link.text}
