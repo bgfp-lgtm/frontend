@@ -8,7 +8,7 @@ export default function ServicesPage() {
     {
       title: "End-to-End Film Production",
       description:
-        "Thorough pre-production planning including scriptwriting, storyboarding, casting, and location scouting for seamless execution.",
+        "Everything from concept to final cut, crafted with cinematic excellence.",
       href: "/film-production",
       video: "/production.mp4",
       icon: FaVideo,
@@ -22,72 +22,68 @@ export default function ServicesPage() {
         "https://images.unsplash.com/photo-1464375117522-1311d763d328?q=80&w=1200&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=1200&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1516410529446-2c777cb7366d?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1524712023315-99a081552848?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1200&auto=format&fit=crop",
       ],
       subServices: [
         {
-          name: "Final Script",
+          name: "Final Script & Screenplay Development",
           description:
-            "Complete script development with dialogue and technical directions.",
+            "Crafting compelling scripts & screenplays with strong narrative structure, dialogue, and pacing to engage audiences from first page to final cut.",
         },
         {
-          name: "Storyboarding",
+          name: "Storyboarding & Shot Planning",
           description:
-            "Visual planning through detailed storyboards for every scene.",
+            "Visualise every scene with detailed storyboards and shot-planning to ensure efficient shoots and cinematic consistency.",
         },
         {
-          name: "Casting",
+          name: "Casting & Talent Selection",
           description:
-            "Professional talent scouting, auditions, and casting decisions.",
+            "Professional casting services to match the best talent for your film, commercial, or branded content.",
         },
         {
-          name: "Location Scouting",
+          name: "Location Scouting & Set Design",
           description:
-            "Finding and securing perfect locations for your production.",
+            "Scouting ideal and permitted locations; designing and preparing sets that enhance your story's visual impact.",
         },
         {
-          name: "Budgeting",
-          description: "Comprehensive budget planning and cost management.",
-        },
-        {
-          name: "Principal Photography",
-          description: "Main filming phase with professional camera work.",
-        },
-        {
-          name: "Direction",
+          name: "Budgeting & Production Scheduling",
           description:
-            "Creative direction to bring your vision to life on screen.",
+            "Clear and realistic budget plans and schedules that keep your project on time and within cost.",
         },
         {
-          name: "Cinematography",
+          name: "Principal Photography / Filming",
           description:
-            "Professional camera work and visual storytelling techniques.",
+            "High-quality filming using cinematic techniques, skilled crews, and industry-standard equipment.",
         },
         {
-          name: "Video Editing",
+          name: "Direction & Creative Oversight",
           description:
-            "Professional post-production editing for narrative flow.",
+            "Visionary direction and creative oversight to align all elements towards a cohesive, engaging film.",
         },
         {
-          name: "VFX",
+          name: "Cinematography & Visual Storytelling",
           description:
-            "Visual effects creation and integration for enhanced storytelling.",
+            "Cinematic camera work, lighting and composition that elevate your film's visual narrative.",
         },
         {
-          name: "Color Grading",
+          name: "Post-Production: Editing & VFX",
           description:
-            "Professional color correction and grading for visual consistency.",
+            "Seamless editing, effects, and transitions to bring polish and storytelling clarity in post-production.",
         },
         {
-          name: "Sound Design",
+          name: "Color Grading & Sound Design",
           description:
-            "Creating immersive audio experiences through sound design.",
+            "Mood-setting colour correction and immersive sound design for a fully professional, cinematic finish.",
         },
       ],
     },
     {
       title: "Marketing & Strategy",
       description:
-        "Comprehensive digital marketing strategies, social media management, and content marketing to amplify your brand reach.",
+        "Amplify your reach. Engage your audience. Build lasting impact.",
       href: "/marketing-strategy",
       video: "/marketing.mp4",
       icon: FaChartLine,
@@ -104,44 +100,51 @@ export default function ServicesPage() {
       ],
       subServices: [
         {
-          name: "Film Branding",
+          name: "Film Branding & Identity Design",
           description:
-            "Develop comprehensive brand identity and visual language.",
+            "Develop strong film branding and visual identity to make your project memorable and recognisable.",
         },
         {
-          name: "Trailer/Promo Editing",
-          description: "Create compelling trailers and promotional content.",
+          name: "Trailer & Promo Video Editing",
+          description:
+            "Create powerful trailers or promotional teasers that generate excitement and share-ability.",
         },
         {
-          name: "Poster/Key Art Design",
-          description: "Design striking posters and key art for your project.",
+          name: "Poster & Key Art Design",
+          description:
+            "Design eye-catching posters and key art that capture attention in both print and digital channels.",
         },
         {
-          name: "Press Kits",
-          description: "Develop professional press kits for media outreach.",
+          name: "Press Kits & Media Outreach",
+          description:
+            "Prepare professional press kits and conduct media outreach to build buzz and press coverage.",
         },
         {
-          name: "Festival Submissions",
-          description: "Strategic festival submission planning and execution.",
+          name: "Festival Submission Strategy",
+          description:
+            "Strategic festival submission planning to maximise exposure, awards, and screening opportunities.",
         },
         {
-          name: "Digital PR",
-          description: "Comprehensive digital public relations strategies.",
+          name: "PR & Influencer",
+          description:
+            "Leverage online PR and influencer partnerships to expand reach and build credibility.",
         },
         {
-          name: "SEO",
-          description: "Search engine optimization for improved visibility.",
+          name: "SEO for Films & Video",
+          description:
+            "Search engine optimization strategies tailored to film content so your work is discovered online.",
         },
         {
-          name: "Social Media Campaigns",
-          description: "Engaging social media strategies across all platforms.",
+          name: "Social Media Campaigns & Community Engagement",
+          description:
+            "Engaging social campaigns and community building to increase audience interaction and sharing.",
         },
       ],
     },
     {
       title: "Software & Development",
       description:
-        "Strategic project development from concept to completion. We bring your ideas to life with comprehensive planning and execution.",
+        "Tech-forward tools to expand your film's capabilities and reach.",
       href: "/software-development",
       video: "/coding.mp4",
       icon: FaCode,
@@ -158,61 +161,54 @@ export default function ServicesPage() {
       ],
       subServices: [
         {
-          name: "Concept Creation",
+          name: "Concept & Technical Planning",
           description:
-            "Transform your ideas into viable software concepts with strategic planning.",
+            "Defining software or app concepts, user stories, tech stack, and product roadmap aligned with your film's goals.",
         },
         {
-          name: "Scriptwriting",
+          name: "Scriptwriting for Software / User Stories",
           description:
-            "Create comprehensive technical specifications and user stories.",
+            "Creating detailed software specifications, scripts, and user stories for development clarity.",
         },
         {
-          name: "Feasibility Analysis",
+          name: "Feasibility & Market Analysis",
           description:
-            "Evaluate technical feasibility, market potential, and resource requirements.",
+            "Evaluating technical, financial, and market feasibility to ensure project success.",
         },
         {
-          name: "Funding Strategy",
+          name: "Funding Strategy & Pitch Materials",
           description:
-            "Develop funding strategies and pitch materials for investment.",
+            "Crafting investor pitches and funding plans to secure backing for your software / film tech projects.",
         },
         {
-          name: "Team Assembly",
+          name: "Team Assembly & Project Management",
           description:
-            "Build and manage development teams with the right expertise.",
+            "Bringing together expert teams & supervising development using agile methodologies for efficient delivery.",
         },
         {
-          name: "Project Management",
-          description: "Oversee project execution with agile methodologies.",
-        },
-        {
-          name: "Website Creation",
+          name: "Web & Mobile App Development",
           description:
-            "Design and develop professional websites for your brand.",
+            "Building responsive websites and mobile apps that enhance your film's reach and viewer experience.",
         },
         {
-          name: "Streaming Integration",
+          name: "Streaming Platform / Integration Solutions",
           description:
-            "Integrate streaming capabilities and real-time features.",
+            "Integrating streaming capabilities for live-video, VOD platforms or multi-device streaming.",
         },
         {
-          name: "Mobile App Development",
-          description: "Build native and cross-platform mobile applications.",
-        },
-        {
-          name: "UI/UX Design",
+          name: "UI/UX Design & Interactive Tools",
           description:
-            "Design intuitive user interfaces and exceptional experiences.",
+            "Designing intuitive user interfaces and immersive UX experiences for web, apps, or interactive film content.",
         },
         {
-          name: "EPK Hosting",
-          description: "Create and host electronic press kits for marketing.",
-        },
-        {
-          name: "Rights Acquisition",
+          name: "Electronic Press Kit (EPK) Hosting & Web Services",
           description:
-            "Handle intellectual property rights and legal documentation.",
+            "Hosting and maintaining EPKs and websites to showcase your film, cast, and media assets seamlessly.",
+        },
+        {
+          name: "Rights Acquisition & Legal / Licensing Software Support",
+          description:
+            "Guiding rights acquisition, licensing, and digital rights management to legally protect your content.",
         },
       ],
     },
@@ -240,7 +236,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Services Section */}
-      <div className="w-full px-4 md:px-20 py-16  mb-20">
+      <div className="w-full px-4 md:px-20 py-16  mb-20">
         <div className="w-full mx-auto">
           <div className="space-y-16">
             {services.map((service, index) => (

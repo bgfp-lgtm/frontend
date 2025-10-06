@@ -3,15 +3,18 @@
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import CTASection from "@/components/CTASection";
+import VideoModal from "@/components/VideoModal";
 
 export default function ProjectsPage() {
-  const videos = [
-    { id: "enq3FsysMk0", title: "MARKS AND SPENCER LONDON" },
-    { id: "LittDjvruDs", title: "Carlsberg Smooth Soda" },
-    { id: "ewj1P99iAC4", title: "KIA MOTORS" },
+  const projects = [
+    { id: "enq3FsysMk0", title: "MARKS AND SPENCER LONDON", image: "/sony.png" },
+    { id: "LittDjvruDs", title: "Carlsberg Smooth Soda", image: "/carlsberg.jpg" },
+    { id: "ewj1P99iAC4", title: "KIA MOTORS", image: "/kia.jpg" },
   ];
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [openVideoId, setOpenVideoId] = useState<string | null>(null);
+  const [openTitle, setOpenTitle] = useState<string | undefined>(undefined);
 
   const buildIframeSrc = (videoId: string, isHovered: boolean) => {
     const baseSrc = `https://www.youtube.com/embed/${videoId}`;
@@ -69,49 +72,42 @@ export default function ProjectsPage() {
         <div className="max-w-6xl mx-auto">
           <div className="mb-10 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-            <p className="text-gray-600">Hover over a project to play the video.</p>
+            <p className="text-gray-600">Click a project to watch its video.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {videos.map((video, index) => {
-              const isHovered = hoveredIndex === index;
+            {projects.map((project, index) => {
               return (
-                <div
-                  key={video.id}
-                  className="group rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
+                <button
+                  key={project.id}
+                  onClick={() => { setOpenVideoId(project.id); setOpenTitle(project.title); }}
+                  className="group text-left rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
                 >
                   <div className="w-full aspect-video relative bg-black">
-                    {!isHovered && (
-                      <img
-                        src={getThumbnailUrl(video.id)}
-                        alt={`${video.title} thumbnail`}
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
-                    )}
-                    {isHovered && (
-                      <iframe
-                        className="absolute inset-0 w-full h-full"
-                        src={buildIframeSrc(video.id, true)}
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                      />
-                    )}
+                    <img
+                      src={project.image}
+                      alt={`${project.title} image`}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
                   </div>
                   <div className="p-4">
-                    <h2 className="text-lg font-semibold text-gray-900">{video.title}</h2>
-                    <p className="text-sm text-gray-600">YouTube embed that plays on hover.</p>
+                    <h2 className="text-lg font-semibold text-gray-900">{project.title}</h2>
+                    <p className="text-sm text-gray-600">Tap to watch on YouTube.</p>
                   </div>
-                </div>
+                </button>
               );
             })}
           </div>
         </div>
       </div>
       <CTASection />
+      <VideoModal
+        open={Boolean(openVideoId)}
+        videoId={openVideoId}
+        title={openTitle}
+        onClose={() => { setOpenVideoId(null); setOpenTitle(undefined); }}
+      />
     </div>
   );
 }
