@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { BsInstagram, BsYoutube, BsFacebook, BsLinkedin } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsTiktok } from "react-icons/bs";
 
 export default function Footer() {
   return (
@@ -32,32 +32,31 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4 text-gray-400">
               <a
-                href="#"
+                href="https://www.instagram.com/birthgiverfilms/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="hover:text-white transition-colors"
               >
                 <BsInstagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
-                aria-label="YouTube"
-                className="hover:text-white transition-colors"
-              >
-                <BsYoutube className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="hover:text-white transition-colors"
-              >
-                <BsFacebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/company/birthgiver-film-productions/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="hover:text-white transition-colors"
               >
                 <BsLinkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@birthgiver_04?lang=en-GB"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="hover:text-white transition-colors"
+              >
+                <BsTiktok className="w-5 h-5" />
               </a>
             </div>
           </div>

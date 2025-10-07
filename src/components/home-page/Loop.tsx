@@ -15,6 +15,7 @@ const techLogos = [
   { src: "/renault.png", alt: "oriflame", title: "oriflame" },
   { src: "/sony.svg", alt: "oriflame", title: "oriflame" },
   { src: "/idbi.png", alt: "oriflame", title: "oriflame" },
+  { src: "/london.png", alt: "oriflame", title: "oriflame" },
 ];
 
 // Counting animation component
@@ -112,7 +113,7 @@ export default function Loop({}: Props) {
                 />
               </div>
               <div className="text-gray-600 dark:text-gray-300 font-medium">
-                global brands 
+                global brands
               </div>
             </div>
           </div>
@@ -130,13 +131,12 @@ export default function Loop({}: Props) {
                 />
               </div>
               <div className="text-gray-600 dark:text-gray-300 font-medium">
-                countries 
+                countries
               </div>
             </div>
           </div>
           <div className="text-center group">
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100 dark:border-gray-700">
-              
               <div className="text-4xl md:text-5xl font-bold text-purple-600 dark:text-purple-400 mb-2">
                 <CountingNumber
                   end={12}
@@ -146,7 +146,7 @@ export default function Loop({}: Props) {
                 />
               </div>
               <div className="text-gray-600 dark:text-gray-300 font-medium">
-              years of industry experience
+                years of industry experience
               </div>
             </div>
           </div>

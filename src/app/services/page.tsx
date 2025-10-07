@@ -141,14 +141,13 @@ export default function ServicesPage() {
           description:
             "Design stunning visuals that stop scrollers in their tracks, both online and in the real world. We specialize in eye-catching posters and key art that communicate your film's tone and capture attention across digital and print—essential for a successful UK film marketing launch.",
           image:
-            "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1543487945-139a97f387d5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9zdGVyJTIwZGVzaWdufGVufDB8fDB8fHww",
         },
         {
           name: "Press Kits & Media Outreach",
           description:
             "Build authentic buzz and secure valuable press coverage with professionally crafted materials. Our comprehensive press kits and media outreach connect your project with the right journalists and influencers in the UK and internationally to generate impactful coverage.",
-          image:
-            "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1200&auto=format&fit=crop",
+          image: "/press.png",
         },
         {
           name: "Festival Submission Strategy",
@@ -178,9 +177,10 @@ export default function ServicesPage() {
       ],
     },
     {
-      title: "Software & Development",
+      title:
+        "Software & Development: Build Scalable Digital Solutions for Your Business",
       description:
-        "Tech-forward tools to expand your film's capabilities and reach.",
+        "Transform your creative vision into powerful digital experiences. Our custom software development services build the robust platforms, applications, and automated tools that streamline your operations, engage your audience, and drive measurable growth for your business",
       href: "/software-development",
       video: "/coding.mp4",
       icon: FaCode,
