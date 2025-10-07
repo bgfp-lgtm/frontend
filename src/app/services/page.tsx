@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { FaCode, FaVideo, FaChartLine, FaArrowRight } from "react-icons/fa";
@@ -32,51 +33,70 @@ export default function ServicesPage() {
           name: "Final Script & Screenplay Development",
           description:
             "Crafting compelling scripts & screenplays with strong narrative structure, dialogue, and pacing to engage audiences from first page to final cut.",
+          image: "/script.jpg",
         },
         {
           name: "Storyboarding & Shot Planning",
           description:
             "Visualise every scene with detailed storyboards and shot-planning to ensure efficient shoots and cinematic consistency.",
+          image:
+            "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Casting & Talent Selection",
           description:
             "Professional casting services to match the best talent for your film, commercial, or branded content.",
+          image:
+            "https://images.unsplash.com/photo-1551135049-8a33b5883817?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Location Scouting & Set Design",
           description:
             "Scouting ideal and permitted locations; designing and preparing sets that enhance your story's visual impact.",
+          image:
+            "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Budgeting & Production Scheduling",
           description:
             "Clear and realistic budget plans and schedules that keep your project on time and within cost.",
+          image:
+            "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Principal Photography / Filming",
           description:
             "High-quality filming using cinematic techniques, skilled crews, and industry-standard equipment.",
+          image:
+            "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Direction & Creative Oversight",
           description:
             "Visionary direction and creative oversight to align all elements towards a cohesive, engaging film.",
+          image:
+            "https://images.unsplash.com/photo-1549575810-430ab88d9ffa?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Cinematography & Visual Storytelling",
           description:
             "Cinematic camera work, lighting and composition that elevate your film's visual narrative.",
+          image:
+            "https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Post-Production: Editing & VFX",
           description:
             "Seamless editing, effects, and transitions to bring polish and storytelling clarity in post-production.",
+          image:
+            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Color Grading & Sound Design",
           description:
             "Mood-setting colour correction and immersive sound design for a fully professional, cinematic finish.",
+          image:
+            "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop",
         },
       ],
     },
@@ -103,41 +123,57 @@ export default function ServicesPage() {
           name: "Film Branding & Identity Design",
           description:
             "Develop strong film branding and visual identity to make your project memorable and recognisable.",
+          image:
+            "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Trailer & Promo Video Editing",
           description:
             "Create powerful trailers or promotional teasers that generate excitement and share-ability.",
+          image:
+            "https://images.unsplash.com/photo-1523245535111-137b1f1b2a42?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Poster & Key Art Design",
           description:
             "Design eye-catching posters and key art that capture attention in both print and digital channels.",
+          image:
+            "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Press Kits & Media Outreach",
           description:
             "Prepare professional press kits and conduct media outreach to build buzz and press coverage.",
+          image:
+            "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Festival Submission Strategy",
           description:
             "Strategic festival submission planning to maximise exposure, awards, and screening opportunities.",
+          image:
+            "https://images.unsplash.com/photo-1461723007800-90c28b23eb0b?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "PR & Influencer",
           description:
             "Leverage online PR and influencer partnerships to expand reach and build credibility.",
+          image:
+            "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "SEO for Films & Video",
           description:
             "Search engine optimization strategies tailored to film content so your work is discovered online.",
+          image:
+            "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Social Media Campaigns & Community Engagement",
           description:
             "Engaging social campaigns and community building to increase audience interaction and sharing.",
+          image:
+            "https://images.unsplash.com/photo-1519222970733-f546218fa6d7?q=80&w=1200&auto=format&fit=crop",
         },
       ],
     },
@@ -164,51 +200,71 @@ export default function ServicesPage() {
           name: "Concept & Technical Planning",
           description:
             "Defining software or app concepts, user stories, tech stack, and product roadmap aligned with your film's goals.",
+          image:
+            "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Scriptwriting for Software / User Stories",
           description:
             "Creating detailed software specifications, scripts, and user stories for development clarity.",
+          image:
+            "https://images.unsplash.com/photo-1494173853739-c21f58b16055?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Feasibility & Market Analysis",
           description:
             "Evaluating technical, financial, and market feasibility to ensure project success.",
+          image:
+            "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Funding Strategy & Pitch Materials",
           description:
             "Crafting investor pitches and funding plans to secure backing for your software / film tech projects.",
+          image:
+            "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Team Assembly & Project Management",
           description:
             "Bringing together expert teams & supervising development using agile methodologies for efficient delivery.",
+          image:
+            "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Web & Mobile App Development",
           description:
             "Building responsive websites and mobile apps that enhance your film's reach and viewer experience.",
+          image:
+            "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Streaming Platform / Integration Solutions",
           description:
             "Integrating streaming capabilities for live-video, VOD platforms or multi-device streaming.",
+          image:
+            "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "UI/UX Design & Interactive Tools",
           description:
             "Designing intuitive user interfaces and immersive UX experiences for web, apps, or interactive film content.",
+          image:
+            "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Electronic Press Kit (EPK) Hosting & Web Services",
           description:
             "Hosting and maintaining EPKs and websites to showcase your film, cast, and media assets seamlessly.",
+          image:
+            "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Rights Acquisition & Legal / Licensing Software Support",
           description:
             "Guiding rights acquisition, licensing, and digital rights management to legally protect your content.",
+          image:
+            "https://images.unsplash.com/photo-1473186505569-9c61870c11f9?q=80&w=1200&auto=format&fit=crop",
         },
       ],
     },
@@ -260,14 +316,19 @@ export default function ServicesPage() {
                         className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all"
                       >
                         <div className="relative h-40 w-full overflow-hidden">
-                          <img
+                          <Image
                             src={
+                              subService.image ||
                               service.images?.[
                                 subIndex % (service.images?.length || 1)
-                              ]
+                              ] ||
+                              "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963f?q=80&w=1200&auto=format&fit=crop"
                             }
                             alt={subService.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            priority={subIndex < 3}
                           />
                         </div>
                         <div className="p-6">

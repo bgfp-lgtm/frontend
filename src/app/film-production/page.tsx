@@ -1,47 +1,58 @@
 import React from "react";
+import Image from "next/image";
 import CTASection from "@/components/CTASection";
 
 export default function FilmProductionPage() {
   const services = [
     {
       title: "Final Script & Screenplay Development",
-      description: "Crafting compelling scripts & screenplays with strong narrative structure, dialogue, and pacing to engage audiences from first page to final cut."
+      description: "Crafting compelling scripts & screenplays with strong narrative structure, dialogue, and pacing to engage audiences from first page to final cut.",
+      imageUrl: "https://images.unsplash.com/photo-1523246194821-8d5640ed1d0d?q=80&w=1887&auto=format&fit=crop"
     },
     {
       title: "Storyboarding & Shot Planning",
-      description: "Visualise every scene with detailed storyboards and shot-planning to ensure efficient shoots and cinematic consistency."
+      description: "Visualise every scene with detailed storyboards and shot-planning to ensure efficient shoots and cinematic consistency.",
+      imageUrl: "https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1887&auto=format&fit=crop"
     },
     {
       title: "Casting & Talent Selection",
-      description: "Professional casting services to match the best talent for your film, commercial, or branded content."
+      description: "Professional casting services to match the best talent for your film, commercial, or branded content.",
+      imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1887&auto=format&fit=crop"
     },
     {
       title: "Location Scouting & Set Design",
-      description: "Scouting ideal and permitted locations; designing and preparing sets that enhance your story's visual impact."
+      description: "Scouting ideal and permitted locations; designing and preparing sets that enhance your story's visual impact.",
+      imageUrl: "https://images.unsplash.com/photo-1467987506553-8f3916508521?q=80&w=1887&auto=format&fit=crop"
     },
     {
       title: "Budgeting & Production Scheduling",
-      description: "Clear and realistic budget plans and schedules that keep your project on time and within cost."
+      description: "Clear and realistic budget plans and schedules that keep your project on time and within cost.",
+      imageUrl: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1887&auto=format&fit=crop"
     },
     {
       title: "Principal Photography / Filming",
-      description: "High-quality filming using cinematic techniques, skilled crews, and industry-standard equipment."
+      description: "High-quality filming using cinematic techniques, skilled crews, and industry-standard equipment.",
+      imageUrl: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1887&auto=format&fit=crop"
     },
     {
       title: "Direction & Creative Oversight",
-      description: "Visionary direction and creative oversight to align all elements towards a cohesive, engaging film."
+      description: "Visionary direction and creative oversight to align all elements towards a cohesive, engaging film.",
+      imageUrl: "https://images.unsplash.com/photo-1515706886584-2df9b95e9d43?q=80&w=1887&auto=format&fit=crop"
     },
     {
       title: "Cinematography & Visual Storytelling",
-      description: "Cinematic camera work, lighting and composition that elevate your film's visual narrative."
+      description: "Cinematic camera work, lighting and composition that elevate your film's visual narrative.",
+      imageUrl: "https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1887&auto=format&fit=crop"
     },
     {
       title: "Post-Production: Editing & VFX",
-      description: "Seamless editing, effects, and transitions to bring polish and storytelling clarity in post-production."
+      description: "Seamless editing, effects, and transitions to bring polish and storytelling clarity in post-production.",
+      imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1887&auto=format&fit=crop"
     },
     {
       title: "Color Grading & Sound Design",
-      description: "Mood-setting colour correction and immersive sound design for a fully professional, cinematic finish."
+      description: "Mood-setting colour correction and immersive sound design for a fully professional, cinematic finish.",
+      imageUrl: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1887&auto=format&fit=crop"
     },
   ];
 
@@ -81,10 +92,22 @@ export default function FilmProductionPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-xl shadow-sm p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
+                <div className="relative w-full h-44 sm:h-52 md:h-56">
+                  <Image
+                    src={service.imageUrl}
+                    alt={service.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                    priority={index < 3}
+                  />
+                </div>
+                <div className="p-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                </div>
               </div>
             ))}
           </div>
