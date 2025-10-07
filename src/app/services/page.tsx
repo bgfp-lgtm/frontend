@@ -47,8 +47,7 @@ export default function ServicesPage() {
           name: "Final Script & Screenplay Development",
           description:
             "We craft compelling, narrative-driven scripts that form the bedrock of any great film. Our screenwriting team focuses on strong structure, authentic dialogue, and engaging pacing to ensure your story holds audience attention from the first page to the final scene.",
-          image:
-            "https://images.unsplash.com/photo-1735893066935-2b7995bab10d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNjcmlwdGluZ3xlbnwwfHwwfHx8MA%3D%3D",
+          image: "/scripting.webp",
         },
         {
           name: "Storyboarding & Shot Planning",
@@ -66,8 +65,7 @@ export default function ServicesPage() {
           name: "Location Scouting & Set Design",
           description:
             "We find and secure the perfect backdrop for your narrative. Our team scouts permitted locations and designs immersive sets across the UK that enhance your story's visual impact and authenticity.",
-          image:
-            "https://images.unsplash.com/photo-1668911128137-2f40fb6bde1d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fExvY2F0aW9uJTIwU2NvdXRpbmclMjAlMjYlMjBTZXQlMjBEZXNpZ258ZW58MHx8MHx8fDA%3D",
+          image: "/location.webp",
         },
         {
           name: "Budgeting & Production Scheduling",
@@ -86,15 +84,13 @@ export default function ServicesPage() {
           name: "Direction & Creative Oversight",
           description:
             "Guide your project with a steady, visionary hand. Our directors provide comprehensive creative oversight, aligning every element—from performance to pacing—into a cohesive and engaging final film.",
-          image:
-            "https://plus.unsplash.com/premium_photo-1681488007344-c75b0cf8b0cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JlYXRpdmV8ZW58MHx8MHx8fDA%3D",
+          image: "/director.webp",
         },
         {
           name: "Cinematography & Visual Storytelling",
           description:
             "Elevate your narrative through the power of imagery. Our cinematography employs masterful camera work, lighting, and composition to create a powerful visual language that connects with viewers on an emotional level.",
-          image:
-            "https://images.unsplash.com/photo-1512025316832-8658f04f8a83?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Q2luZW1hdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D",
+          image: "/cinemato.png",
         },
         {
           name: "Post-Production: Editing & VFX",
@@ -106,8 +102,7 @@ export default function ServicesPage() {
           name: "Color Grading & Sound Design",
           description:
             "Add the final layer of professional polish. Through mood-enhancing color correction and immersive sound design, we deliver the fully cinematic finish that makes your film stand out with a professional, theatrical quality.",
-          image:
-            "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop",
+          image: "/color.webp",
         },
       ],
     },
