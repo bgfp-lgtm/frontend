@@ -27,19 +27,36 @@ export default function Footer() {
               Birthgiver
             </h3>
             <p className="text-gray-400 leading-relaxed mb-6 max-w-sm">
-              Cinematic storytelling from concept to screen. We craft compelling visuals that move audiences and grow brands.
+              Cinematic storytelling from concept to screen. We craft compelling
+              visuals that move audiences and grow brands.
             </p>
             <div className="flex items-center gap-4 text-gray-400">
-              <a href="#" aria-label="Instagram" className="hover:text-white transition-colors">
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="hover:text-white transition-colors"
+              >
                 <BsInstagram className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="YouTube" className="hover:text-white transition-colors">
+              <a
+                href="#"
+                aria-label="YouTube"
+                className="hover:text-white transition-colors"
+              >
                 <BsYoutube className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Facebook" className="hover:text-white transition-colors">
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="hover:text-white transition-colors"
+              >
                 <BsFacebook className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="LinkedIn" className="hover:text-white transition-colors">
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                className="hover:text-white transition-colors"
+              >
                 <BsLinkedin className="w-5 h-5" />
               </a>
             </div>
@@ -92,14 +109,15 @@ export default function Footer() {
               <li className="text-gray-400">India</li>
               <li className="text-gray-400">Canada</li>
               <li className="text-gray-400">Australia</li>
-              <li className="text-gray-400 text-red-400">+ 6 more countries</li>
+              <li className=" text-red-400">and across the globe</li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-semibold mb-4">Stay in the loop</h4>
             <p className="text-gray-400 text-sm mb-4">
-              Get updates on new releases, behind-the-scenes, and exclusive offers.
+              Get updates on new releases, behind-the-scenes, and exclusive
+              offers.
             </p>
             <form
               onSubmit={(e) => e.preventDefault()}
