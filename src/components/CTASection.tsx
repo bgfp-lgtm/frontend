@@ -66,9 +66,9 @@ export default function CTASection() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Our Address</h3>
               <p className="text-gray-300 leading-relaxed">
-                123 Creative Street<br />
+                Seymour Road<br />
                 London, UK<br />
-                SW1A 1AA
+                N8 0BH
               </p>
             </div>
           </motion.div>
@@ -88,7 +88,7 @@ export default function CTASection() {
               <h3 className="text-xl font-bold text-white mb-4">Contact Us</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
                 +44 7776 842718<br />
-                birthgiverfilmproductions@gmail.com
+                bgfp@birthgiverfilmproduction.com
               </p>
               <motion.button
                 onClick={handleGetQuoteClick}
@@ -116,12 +116,8 @@ export default function CTASection() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Opening Hours</h3>
               <div className="text-gray-300 leading-relaxed space-y-1">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
-                <div className="mt-4 p-2 bg-red-500/20 rounded-lg">
-                  <p className="text-red-400 text-sm font-medium">24/7 Emergency Support</p>
-                </div>
+                <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                <p>Sunday: Open only upon request</p>
               </div>
             </div>
           </motion.div>

@@ -124,7 +124,7 @@ export default function Loop({}: Props) {
                 />
               </div>
               <div className="text-gray-600 dark:text-gray-300 font-medium">
-                Countries
+                Worked with Clients
               </div>
             </div>
           </div>
