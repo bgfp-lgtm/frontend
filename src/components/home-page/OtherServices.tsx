@@ -259,7 +259,7 @@ export default function OtherServices() {
                   <div>
                     <p className="font-medium text-gray-800">Email</p>
                     <p className="text-gray-600">
-                      birthgiverfilmproductions@gmail.com
+                      bgfp@birthgiverfilmproduction.com
                     </p>
                   </div>
                 </div>
@@ -288,7 +288,7 @@ export default function OtherServices() {
                 </button>
                 <button
                   onClick={() =>
-                    window.open("mailto:birthgiverfilmproductions@gmail.com")
+                    window.open("mailto:bgfp@birthgiverfilmproduction.com")
                   }
                   className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors flex items-center justify-center"
                 >
@@ -304,7 +304,12 @@ export default function OtherServices() {
       <div className="w-full px-4 md:px-20 py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
-          <div className="text-center mb-16">
+          <div className="relative text-center mb-16">
+            {/* Decorative background image to enhance header text */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-center bg-cover opacity-10 pointer-events-none"
+            />
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

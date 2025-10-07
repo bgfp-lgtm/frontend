@@ -63,7 +63,7 @@ export default async function BlogDetailPage({ params }: Props) {
               <div className="flex flex-wrap items-center gap-6 mb-8 pb-8 border-b border-gray-200">
                 <div className="flex items-center gap-2 text-gray-500">
                   <FaUser className="w-4 h-4" />
-                  <span>By {post.by || "birthgiverfilmproductions@gmail.com"}</span>
+                  <span>By {post.by || "bgfp@birthgiverfilmproduction.com"}</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-500">
                   <FaCalendar className="w-4 h-4" />

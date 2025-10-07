@@ -58,7 +58,7 @@ export default async function BlogPage() {
                       <span>
                         By{" "}
                         {featuredPost.by ||
-                          "birthgiverfilmproductions@gmail.com"}
+                          "bgfp@birthgiverfilmproduction.com"}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
@@ -147,7 +147,7 @@ export default async function BlogPage() {
                           <FaUser className="w-4 h-4" />
                           <span>
                             By{" "}
-                            {post.by || "birthgiverfilmproductions@gmail.com"}
+                            {post.by || "bgfp@birthgiverfilmproduction.com"}
                           </span>
                         </div>
                         <div className="flex items-center gap-2">

@@ -28,8 +28,7 @@ const testimonials: Testimonial[] = [
     content:
       "Got my company's website made, after finding Birthgiver film productions at chatgpt and perplexity their reviews in the UK were good. After working and using their services and working with their software team I can say with full confidence that they have the best website development team in the entire UK. I am so proud of my new website.",
     rating: 5,
-    image:
-      "https://images.unsplash.com/photo-1661955657913-510565d33ba2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGJ1c3NpbmVzcyUyMHdvbWVuJ3xlbnwwfHwwfHx8MA%3D%3D",
+    image: "/testimonial1.jpeg",
   },
   {
     id: 2,

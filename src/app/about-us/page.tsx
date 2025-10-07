@@ -5,6 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaHeart, FaHandsHelping, FaRocket, FaLeaf } from "react-icons/fa";
 import CTASection from "@/components/CTASection";
+import { Award, Users, Heart, Cpu, Leaf } from "lucide-react";
 
 type Props = {};
 
@@ -46,6 +47,45 @@ const teamMembers: TeamMember[] = [
       "Sales & Marketing",
       "Business Development",
     ],
+  },
+];
+
+const features = [
+  {
+    icon: Award,
+    title: "Proven Expertise",
+    description:
+      "We've worked with top-tier brands and now bring that experience to small, medium, and large businesses.",
+    delay: 0.05,
+  },
+  {
+    icon: Users,
+    title: "Collaborative Creativity",
+    description:
+      "Our team of writers, directors, designers, and developers work together to deliver innovative, high-impact solutions.",
+    delay: 0.1,
+  },
+  {
+    icon: Heart,
+    title: "Emotional Storytelling",
+    description:
+      "We create films and content that move audiences, inspire action, and leave lasting impressions.",
+    delay: 0.15,
+  },
+  {
+    icon: Cpu,
+    title: "Innovative Technology",
+    description:
+      "From VR experiences to interactive narratives, we leverage cutting-edge tech for memorable storytelling.",
+    delay: 0.2,
+  },
+  {
+    icon: Leaf,
+    title: "Social & Sustainable Impact",
+    description:
+      "We prioritize eco-friendly production and social responsibility, partnering with nonprofits and community organizations.",
+    delay: 0.25,
+    span: true,
   },
 ];
 
@@ -127,11 +167,11 @@ export default function About({}: Props) {
               className="text-center mb-16 mt-16 md:mt-24"
             >
               <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                WHY CHOOSE BGFP?
-              </h2>
-              <h3 className="text-2xl md:text-3xl font-semibold text-red-500 mb-8">
                 What Is BirthGiver Film Productions?
-              </h3>
+              </h2>
+              {/* <h3 className="text-2xl md:text-3xl font-semibold text-red-500 mb-8">
+                What Is BirthGiver Film Productions?
+              </h3> */}
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -149,9 +189,12 @@ export default function About({}: Props) {
                     Mission
                   </h4>
                   <p className="text-gray-700 leading-relaxed text-lg">
-                    To produce high-quality, culturally impactful films and
-                    digital content for small to big businesses while driving
-                    economic growth in the UK.
+                    Our mission is to empower businesses to grow through
+                    high-quality, culturally impactful films, digital content,
+                    and marketing solutions. We don’t just complete projects. We
+                    help you amplify your brand, engage your audience, and
+                    achieve measurable growth, whether you are a small business
+                    or a large corporation.
                   </p>
                 </div>
 
@@ -161,9 +204,12 @@ export default function About({}: Props) {
                     Vision
                   </h4>
                   <p className="text-gray-700 leading-relaxed text-lg">
-                    Be a leading top-tier film production company in the UK and
-                    subsequently globally, known for innovation and cultural
-                    storytelling. Working with small, medium and big businesses.
+                    To be a top-tier UK and global production company,
+                    recognized for original storytelling, innovative digital
+                    solutions, and transformative marketing strategies. We aim
+                    to bring the expertise we’ve delivered for leading brands to
+                    businesses of all sizes, helping them thrive locally and
+                    globally.
                   </p>
                 </div>
               </motion.div>
@@ -181,12 +227,15 @@ export default function About({}: Props) {
                   Our Story
                 </h4>
                 <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                  "Birthgiver Film Productions" was founded by Bhaway Mehta as a
-                  tribute to his mother and all the mothers in the world, who
-                  give birth and selflessly nurture with utmost love and passion
-                  towards the new born similarly, we create the best stories in
-                  the world and nurture them with authenticity and passion to
-                  represent them in mainstream commercial world.
+                  “BirthGiver Film Productions” was founded by Bhaway Mehta as a
+                  heartfelt tribute to his mother and to all mothers and women
+                  worldwide, who selflessly nurture with love and dedication. In
+                  the same spirit, we craft and nurture exceptional stories with
+                  authenticity and passion, bringing them to life in the
+                  mainstream commercial world through film production, software
+                  development, and strategic marketing ensuring brand and
+                  personal stories reach their target audiences across the
+                  globe.
                 </p>
                 <p className="text-gray-700 leading-relaxed text-lg">
                   We saw an industry dominated by recycled ideas and formulaic
@@ -214,10 +263,10 @@ export default function About({}: Props) {
                   Focus on Emotional Impact
                 </h5>
                 <p className="text-gray-600 leading-relaxed">
-                  Our films are designed to evoke deep emotional responses.
-                  Whether it's a heart-wrenching drama, a thought-provoking
-                  documentary, or a thrilling adventure, we aim to leave
-                  audiences moved, inspired, and transformed.
+                  We create films and content that move audiences, from
+                  compelling dramas to engaging documentaries and immersive
+                  experiences. Every project is designed to leave a lasting
+                  impression and inspire action.
                 </p>
               </div>
 
@@ -229,11 +278,10 @@ export default function About({}: Props) {
                   Collaborative Creativity
                 </h5>
                 <p className="text-gray-600 leading-relaxed">
-                  We foster a collaborative environment where writers,
-                  directors, actors, and crew members are empowered to bring
-                  their best ideas to the table. Our team is a family of
-                  passionate storytellers who believe in the power of collective
-                  creativity.
+                  Our team is a family of writers, directors, designers, and
+                  developers who work together to create innovative, high-impact
+                  solutions. Collaboration is at the heart of everything we do,
+                  ensuring your project reaches its fullest potential.
                 </p>
               </div>
 
@@ -242,14 +290,12 @@ export default function About({}: Props) {
                   <FaRocket className="text-2xl text-red-600" />
                 </div>
                 <h5 className="text-xl font-bold text-gray-900 mb-3">
-                  Innovative Storytelling
+                  Innovative Storytelling & Technology
                 </h5>
                 <p className="text-gray-600 leading-relaxed">
-                  We embrace cutting-edge technology and unconventional
-                  storytelling techniques to create visually stunning and
-                  narratively compelling films. From immersive VR experiences to
-                  interactive narratives, we push the boundaries of what cinema
-                  can be.
+                  We combine cutting-edge technology with creative storytelling,
+                  from interactive narratives to VR experiences, pushing the
+                  boundaries of modern cinema and digital media.
                 </p>
               </div>
 
@@ -258,16 +304,78 @@ export default function About({}: Props) {
                   <FaLeaf className="text-2xl text-red-600" />
                 </div>
                 <h5 className="text-xl font-bold text-gray-900 mb-3">
-                  Social Impact
+                  Social & Sustainable Impact
                 </h5>
                 <p className="text-gray-600 leading-relaxed">
-                  We are committed to using our platform for good. We partner
-                  with nonprofits, activists, and community organisations to
-                  amplify important social issues and drive meaningful change
-                  through our films. Focusing on sustainable ways to film.
+                  We are committed to social responsibility and sustainability.
+                  Partnering with nonprofits, activists, and community
+                  organizations, we amplify important social issues while using
+                  eco-friendly production practices.
                 </p>
               </div>
             </motion.div>
+          </div>
+        </motion.section>
+
+        {/* Why Choose BirthGiver */}
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mb-20 md:mb-32 px-4"
+        >
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Why Choose <span className="text-red-500">BirthGiver</span>?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We blend creative storytelling, technology, and strategy to help
+                brands of every size thrive.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeOut",
+                    delay: feature.delay,
+                  }}
+                  className={`group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-200 p-8 hover:border-red-200 hover:shadow-xl transition-all duration-300 ${
+                    feature.span ? "md:col-span-2" : ""
+                  }`}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-red-50 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300" />
+
+                  <div className="relative">
+                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-500 group-hover:scale-110 transition-all duration-300">
+                      <feature.icon className="w-6 h-6 text-red-500 group-hover:text-white transition-colors duration-300" />
+                    </div>
+
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors duration-300">
+                      {feature.title}
+                    </h3>
+
+                    <p className="text-gray-700 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.section>
 

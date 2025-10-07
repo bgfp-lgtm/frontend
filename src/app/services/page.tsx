@@ -7,9 +7,8 @@ import { FaCode, FaVideo, FaChartLine, FaArrowRight } from "react-icons/fa";
 export default function ServicesPage() {
   const services = [
     {
-      title: "End-to-End Film Production",
-      description:
-        "Everything from concept to final cut, crafted with cinematic excellence.",
+      title: "End-to-End Film Production: From Concept to Cinematic Final Cut",
+      description: `Our UK-based film production team handles every detail, blending creative vision with meticulous planning to deliver stories that captivate and resonate. We specialize intransforming your concept into a visually stunning narrative, ensuring a smooth, professional process from the first brainstorm to the final cut."Filming in the UK? We will handle everything you need . "Navigating location permits and regulations can be complex. As your local production partner, we manage all the necessary permissions and logistics foryour UK shoot. From historic city streets to scenic national parks, we ensure yourproject is fully compliant and set up for success, so you can focus purely on the creative vision.`,
       href: "/film-production",
       video: "/production.mp4",
       icon: FaVideo,
@@ -32,70 +31,68 @@ export default function ServicesPage() {
         {
           name: "Final Script & Screenplay Development",
           description:
-            "Crafting compelling scripts & screenplays with strong narrative structure, dialogue, and pacing to engage audiences from first page to final cut.",
+            "We craft compelling, narrative-driven scripts that form the bedrock of any great film. Our screenwriting team focuses on strong structure, authentic dialogue, and engaging pacing to ensure your story holds audience attention from the first page to the final scene.",
           image:
             "https://images.unsplash.com/photo-1735893066935-2b7995bab10d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNjcmlwdGluZ3xlbnwwfHwwfHx8MA%3D%3D",
         },
         {
           name: "Storyboarding & Shot Planning",
           description:
-            "Visualise every scene with detailed storyboards and shot-planning to ensure efficient shoots and cinematic consistency.",
+            "Visualize your film before the camera rolls. Our detailed storyboards and precise shot plans ensure cinematic consistency, streamline your filming schedule, and guarantee that every visual element aligns with your creative director’s vision.",
           image:
             "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Casting & Talent Selection",
           description:
-            "Professional casting services to match the best talent for your film, commercial, or branded content.",
-          image:
-            "https://images.unsplash.com/photo-1551135049-8a33b5883817?q=80&w=1200&auto=format&fit=crop",
+            "Find the perfect faces for your story. Our professional casting services connect you with the ideal on-screen talent for your film, commercial, or branded content, ensuring performances that are both authentic and powerful.",
+          image: "/casting.webp",
         },
         {
           name: "Location Scouting & Set Design",
           description:
-            "Scouting ideal and permitted locations; designing and preparing sets that enhance your story's visual impact.",
+            "We find and secure the perfect backdrop for your narrative. Our team scouts permitted locations and designs immersive sets across the UK that enhance your story's visual impact and authenticity.",
           image:
             "https://images.unsplash.com/photo-1668911128137-2f40fb6bde1d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fExvY2F0aW9uJTIwU2NvdXRpbmclMjAlMjYlMjBTZXQlMjBEZXNpZ258ZW58MHx8MHx8fDA%3D",
         },
         {
           name: "Budgeting & Production Scheduling",
           description:
-            "Clear and realistic budget plans and schedules that keep your project on time and within cost.",
+            "Maintain complete creative and financial control. We provide clear, realistic budgets and efficient production schedules that keep your project on track and within budget, without ever compromising on quality.",
           image:
             "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Principal Photography / Filming",
           description:
-            "High-quality filming using cinematic techniques, skilled crews, and industry-standard equipment.",
+            "Lights, camera, action. Our skilled crews and industry-standard equipment bring the plan to life, using cinematic techniques to capture high-quality footage that forms the core of your visual story.",
           image:
             "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Direction & Creative Oversight",
           description:
-            "Visionary direction and creative oversight to align all elements towards a cohesive, engaging film.",
+            "Guide your project with a steady, visionary hand. Our directors provide comprehensive creative oversight, aligning every element—from performance to pacing—into a cohesive and engaging final film.",
           image:
             "https://plus.unsplash.com/premium_photo-1681488007344-c75b0cf8b0cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JlYXRpdmV8ZW58MHx8MHx8fDA%3D",
         },
         {
           name: "Cinematography & Visual Storytelling",
           description:
-            "Cinematic camera work, lighting and composition that elevate your film's visual narrative.",
+            "Elevate your narrative through the power of imagery. Our cinematography employs masterful camera work, lighting, and composition to create a powerful visual language that connects with viewers on an emotional level.",
           image:
             "https://images.unsplash.com/photo-1512025316832-8658f04f8a83?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Q2luZW1hdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D",
         },
         {
           name: "Post-Production: Editing & VFX",
           description:
-            "Seamless editing, effects, and transitions to bring polish and storytelling clarity in post-production.",
-          image:
-            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop",
+            "We stitch the story together with invisible art. Our post-production team specializes in seamless editing, dynamic visual effects, and smooth transitions that bring clarity, polish, and power to your narrative.",
+          image: "/vfx.jpeg",
         },
         {
           name: "Color Grading & Sound Design",
           description:
-            "Mood-setting colour correction and immersive sound design for a fully professional, cinematic finish.",
+            "Add the final layer of professional polish. Through mood-enhancing color correction and immersive sound design, we deliver the fully cinematic finish that makes your film stand out with a professional, theatrical quality.",
           image:
             "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop",
         },
@@ -104,7 +101,7 @@ export default function ServicesPage() {
     {
       title: "Marketing & Strategy",
       description:
-        "Amplify your reach. Engage your audience. Build lasting impact.",
+        "A powerful marketing strategy is not just an option, it's essential. Whether you're a small startup, a growing medium-sized business, or a large enterprise in the UK, our tailored marketing and strategy services are designed to make your project unforgettable and discoverable by a global audience. ",
       href: "/marketing-strategy",
       video: "/marketing.mp4",
       icon: FaChartLine,
@@ -123,56 +120,56 @@ export default function ServicesPage() {
         {
           name: "Film Branding & Identity Design",
           description:
-            "Develop strong film branding and visual identity to make your project memorable and recognisable.",
+            "Craft a unique visual DNA that makes your project instantly recognizable and deeply memorable. We develop powerful film branding and visual identity systems—from logos to colour palettes—that build lasting audience connection and drive recognition and loyalty across the UK and beyond.",
           image:
             "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Trailer & Promo Video Editing",
           description:
-            "Create powerful trailers or promotional teasers that generate excitement and share-ability.",
+            "Create buzz-worthy previews that hook viewers from the first second and compel them to share. Our expert trailer and promo editing crafts compelling narratives that capture the essence of your story—perfect for launching your project to a global audience.",
           image:
-            "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8VmlkZW8lMjBFZGl0aW5nfGVufDB8fDB8fHww",
+            "/promo.webp",
         },
         {
           name: "Poster & Key Art Design",
           description:
-            "Design eye-catching posters and key art that capture attention in both print and digital channels.",
+            "Design stunning visuals that stop scrollers in their tracks, both online and in the real world. We specialize in eye-catching posters and key art that communicate your film's tone and capture attention across digital and print—essential for a successful UK film marketing launch.",
           image:
             "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Press Kits & Media Outreach",
           description:
-            "Prepare professional press kits and conduct media outreach to build buzz and press coverage.",
+            "Build authentic buzz and secure valuable press coverage with professionally crafted materials. Our comprehensive press kits and media outreach connect your project with the right journalists and influencers in the UK and internationally to generate impactful coverage.",
           image:
             "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Festival Submission Strategy",
           description:
-            "Strategic festival submission planning to maximise exposure, awards, and screening opportunities.",
+            "Navigate the film festival circuit with a clear plan to maximise awards, exposure, and opportunities. We identify the best-fit festivals to increase your chances of awards, screenings, and recognition—key for UK filmmakers targeting global audiences.",
           image:
             "https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3RyYXRlZ3l8ZW58MHx8MHx8fDA%3D",
         },
         {
-          name: "PR & Influencer",
+          name: "PR & Influencer Partnerships",
           description:
-            "Leverage online PR and influencer partnerships to expand reach and build credibility.",
+            "Leverage trusted voices to expand your reach and build undeniable credibility. We connect your project with authentic PR and influencer partners to create genuine buzz and drive engagement—a powerful growth tactic in the UK.",
           image:
             "https://plus.unsplash.com/premium_photo-1677846526184-86a9d87b5394?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8UFJ8ZW58MHx8MHx8fDA%3D",
         },
         {
           name: "SEO for Films & Video",
           description:
-            "Search engine optimization strategies tailored to film content so your work is discovered online.",
+            "Ensure your content gets discovered by the right audience, right when they're searching. Our SEO for films and video uses tailored strategies like optimized titles, descriptions, and transcripts to help your work rank and be easily found online.",
           image:
             "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Social Media Campaigns & Community Engagement",
           description:
-            "Engaging social campaigns and community building to increase audience interaction and sharing.",
+            "Foster a dedicated community and turn viewers into passionate advocates. We launch engaging social media campaigns and community initiatives that drive interaction and sharing—building long-term loyalty around your project.",
           image:
             "https://images.unsplash.com/photo-1519222970733-f546218fa6d7?q=80&w=1200&auto=format&fit=crop",
         },
@@ -290,7 +287,7 @@ export default function ServicesPage() {
                       <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                         {service.title}
                       </h2>
-                      <p className="text-gray-600 max-w-3xl">
+                      <p className="text-gray-600 text-justify max-w-8xl">
                         {service.description}
                       </p>
                     </div>
@@ -302,7 +299,7 @@ export default function ServicesPage() {
                         key={subIndex}
                         className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all"
                       >
-                        <div className="relative h-40 w-full overflow-hidden">
+                        <div className="relative h-50 w-full overflow-hidden">
                           <Image
                             src={
                               subService.image ||
