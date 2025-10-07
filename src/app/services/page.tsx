@@ -33,7 +33,8 @@ export default function ServicesPage() {
           name: "Final Script & Screenplay Development",
           description:
             "Crafting compelling scripts & screenplays with strong narrative structure, dialogue, and pacing to engage audiences from first page to final cut.",
-          image: "/script.jpg",
+          image:
+            "https://images.unsplash.com/photo-1735893066935-2b7995bab10d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNjcmlwdGluZ3xlbnwwfHwwfHx8MA%3D%3D",
         },
         {
           name: "Storyboarding & Shot Planning",
@@ -75,7 +76,7 @@ export default function ServicesPage() {
           description:
             "Visionary direction and creative oversight to align all elements towards a cohesive, engaging film.",
           image:
-            "https://images.unsplash.com/photo-1549575810-430ab88d9ffa?q=80&w=1200&auto=format&fit=crop",
+            "https://plus.unsplash.com/premium_photo-1681488007344-c75b0cf8b0cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JlYXRpdmV8ZW58MHx8MHx8fDA%3D",
         },
         {
           name: "Cinematography & Visual Storytelling",
@@ -131,7 +132,7 @@ export default function ServicesPage() {
           description:
             "Create powerful trailers or promotional teasers that generate excitement and share-ability.",
           image:
-            "https://images.unsplash.com/photo-1523245535111-137b1f1b2a42?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8VmlkZW8lMjBFZGl0aW5nfGVufDB8fDB8fHww",
         },
         {
           name: "Poster & Key Art Design",
@@ -152,7 +153,7 @@ export default function ServicesPage() {
           description:
             "Strategic festival submission planning to maximise exposure, awards, and screening opportunities.",
           image:
-            "https://images.unsplash.com/photo-1461723007800-90c28b23eb0b?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3RyYXRlZ3l8ZW58MHx8MHx8fDA%3D",
         },
         {
           name: "PR & Influencer",
@@ -197,74 +198,60 @@ export default function ServicesPage() {
       ],
       subServices: [
         {
-          name: "Concept & Technical Planning",
+          name: "Custom Web Application Development",
           description:
-            "Defining software or app concepts, user stories, tech stack, and product roadmap aligned with your film's goals.",
+            "Scalable, secure, and tailored apps for business workflows.",
           image:
             "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
         },
         {
-          name: "Scriptwriting for Software / User Stories",
+          name: "Mobile App Development",
           description:
-            "Creating detailed software specifications, scripts, and user stories for development clarity.",
+            "Native and cross-platform apps (iOS, Android, Flutter, React Native).",
           image:
             "https://images.unsplash.com/photo-1494173853739-c21f58b16055?q=80&w=1200&auto=format&fit=crop",
         },
         {
-          name: "Feasibility & Market Analysis",
+          name: "ERP & CRM Solutions",
           description:
-            "Evaluating technical, financial, and market feasibility to ensure project success.",
+            "End-to-end enterprise systems for managing operations, customers, and resources.",
           image:
             "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
         },
         {
-          name: "Funding Strategy & Pitch Materials",
+          name: "API Development & Integration",
           description:
-            "Crafting investor pitches and funding plans to secure backing for your software / film tech projects.",
+            "Building and connecting APIs for seamless system communication.",
           image:
             "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
         },
         {
-          name: "Team Assembly & Project Management",
+          name: "Cloud Solutions & Deployment",
           description:
-            "Bringing together expert teams & supervising development using agile methodologies for efficient delivery.",
+            "Cloud-native apps, migration, and serverless architecture on AWS, Azure, GCP.",
           image:
             "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop",
         },
         {
-          name: "Web & Mobile App Development",
+          name: "E-Commerce Platforms",
           description:
-            "Building responsive websites and mobile apps that enhance your film's reach and viewer experience.",
+            "Custom online stores with payment integrations, subscriptions, and multi-language support.",
           image:
             "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop",
         },
         {
-          name: "Streaming Platform / Integration Solutions",
+          name: "Automation & Workflow Tools",
           description:
-            "Integrating streaming capabilities for live-video, VOD platforms or multi-device streaming.",
+            "RPA, bots, and internal tools to reduce manual tasks and improve efficiency.",
           image:
             "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1200&auto=format&fit=crop",
         },
         {
-          name: "UI/UX Design & Interactive Tools",
+          name: "UI/UX Design & Prototyping",
           description:
-            "Designing intuitive user interfaces and immersive UX experiences for web, apps, or interactive film content.",
+            "Modern, intuitive designs focused on usability and clean interfaces.",
           image:
             "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
-        },
-        {
-          name: "Electronic Press Kit (EPK) Hosting & Web Services",
-          description:
-            "Hosting and maintaining EPKs and websites to showcase your film, cast, and media assets seamlessly.",
-          image:
-            "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop",
-        },
-        {
-          name: "Rights Acquisition & Legal / Licensing Software Support",
-          description:
-            "Guiding rights acquisition, licensing, and digital rights management to legally protect your content.",
-          image:
-            "https://images.unsplash.com/photo-1473186505569-9c61870c11f9?q=80&w=1200&auto=format&fit=crop",
         },
       ],
     },

@@ -7,7 +7,7 @@ export default function FilmProductionPage() {
     {
       title: "Final Script & Screenplay Development",
       description: "Crafting compelling scripts & screenplays with strong narrative structure, dialogue, and pacing to engage audiences from first page to final cut.",
-      imageUrl: "https://images.unsplash.com/photo-1523246194821-8d5640ed1d0d?q=80&w=1887&auto=format&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1735893066935-2b7995bab10d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNjcmlwdGluZ3xlbnwwfHwwfHx8MA%3D%3D"
     },
     {
       title: "Storyboarding & Shot Planning",
@@ -37,7 +37,7 @@ export default function FilmProductionPage() {
     {
       title: "Direction & Creative Oversight",
       description: "Visionary direction and creative oversight to align all elements towards a cohesive, engaging film.",
-      imageUrl: "https://images.unsplash.com/photo-1515706886584-2df9b95e9d43?q=80&w=1887&auto=format&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1887&auto=format&fit=crop"
     },
     {
       title: "Cinematography & Visual Storytelling",

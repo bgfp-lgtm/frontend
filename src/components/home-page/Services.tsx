@@ -31,7 +31,8 @@ export default function Services({}: Props) {
       title: "End-to-End Film Production",
       description:
         "Thorough pre-production planning including scriptwriting, storyboarding, casting, and location scouting for seamless execution.",
-      image: "/pp.jpg",
+      image:
+        "https://images.unsplash.com/photo-1612544409025-e1f6a56c1152?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmlsbSUyMHByb2R1Y3Rpb258ZW58MHx8MHx8fDA%3D",
       icon: <BsClipboardData className="w-5 h-5" />,
     },
     {
@@ -39,7 +40,8 @@ export default function Services({}: Props) {
       title: "Marketing & Strategy",
       description:
         "Comprehensive digital marketing strategies, social media management, and content marketing to amplify your brand reach.",
-      image: "/dm.jpg",
+      image:
+        "https://plus.unsplash.com/premium_photo-1683980578016-a1f980719ec2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D",
       icon: <BsMegaphone className="w-5 h-5" />,
     },
     {
@@ -47,7 +49,8 @@ export default function Services({}: Props) {
       title: "Software & Website Development",
       description:
         "Strategic project development from concept to completion. We bring your ideas to life with comprehensive planning and execution.",
-      image: "/d.jpg",
+      image:
+        "https://images.unsplash.com/photo-1595675024853-0f3ec9098ac7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D",
       icon: <BsLightbulb className="w-5 h-5" />,
     },
   ];
