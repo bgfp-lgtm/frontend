@@ -4,120 +4,44 @@ import CTASection from "@/components/CTASection";
 export default function FilmProductionPage() {
   const services = [
     {
-      title: "Final Script",
-      description: "Complete script development with dialogue, action, and technical directions for production."
+      title: "Final Script & Screenplay Development",
+      description: "Crafting compelling scripts & screenplays with strong narrative structure, dialogue, and pacing to engage audiences from first page to final cut."
     },
     {
-      title: "Storyboarding",
-      description: "Visual planning through detailed storyboards that map out every scene and shot sequence."
+      title: "Storyboarding & Shot Planning",
+      description: "Visualise every scene with detailed storyboards and shot-planning to ensure efficient shoots and cinematic consistency."
     },
     {
-      title: "Casting",
-      description: "Professional talent scouting, auditions, and casting decisions for all roles."
+      title: "Casting & Talent Selection",
+      description: "Professional casting services to match the best talent for your film, commercial, or branded content."
     },
     {
-      title: "Location Scouting",
-      description: "Finding and securing the perfect locations that match the script requirements."
+      title: "Location Scouting & Set Design",
+      description: "Scouting ideal and permitted locations; designing and preparing sets that enhance your story's visual impact."
     },
     {
-      title: "Budgeting",
-      description: "Comprehensive budget planning and cost management throughout the production process."
+      title: "Budgeting & Production Scheduling",
+      description: "Clear and realistic budget plans and schedules that keep your project on time and within cost."
     },
     {
-      title: "Scheduling",
-      description: "Detailed production scheduling and timeline management for efficient execution."
+      title: "Principal Photography / Filming",
+      description: "High-quality filming using cinematic techniques, skilled crews, and industry-standard equipment."
     },
     {
-      title: "Crew Hiring",
-      description: "Assembling professional production teams with specialized skills and experience."
+      title: "Direction & Creative Oversight",
+      description: "Visionary direction and creative oversight to align all elements towards a cohesive, engaging film."
     },
     {
-      title: "Tech Planning",
-      description: "Technical planning including equipment selection, camera setups, and technical specifications."
+      title: "Cinematography & Visual Storytelling",
+      description: "Cinematic camera work, lighting and composition that elevate your film's visual narrative."
     },
     {
-      title: "Set Design",
-      description: "Creating immersive and authentic sets that bring the story to life."
+      title: "Post-Production: Editing & VFX",
+      description: "Seamless editing, effects, and transitions to bring polish and storytelling clarity in post-production."
     },
     {
-      title: "Costumes",
-      description: "Designing and sourcing costumes that enhance character development and period accuracy."
-    },
-    {
-      title: "Pre-visualization",
-      description: "Creating detailed pre-visualization to plan complex shots and sequences."
-    },
-    {
-      title: "Principal Photography",
-      description: "Main filming phase with professional camera work and on-set direction."
-    },
-    {
-      title: "Direction",
-      description: "Creative direction and guidance to bring the vision to life on screen."
-    },
-    {
-      title: "Cinematography",
-      description: "Professional camera work, framing, and visual storytelling techniques."
-    },
-    {
-      title: "Sound Recording",
-      description: "High-quality audio capture during filming with professional sound equipment."
-    },
-    {
-      title: "Lighting",
-      description: "Expert lighting design and execution to create the perfect mood and atmosphere."
-    },
-    {
-      title: "On-set Management",
-      description: "Coordinating all aspects of production on set for smooth operations."
-    },
-    {
-      title: "Equipment Handling",
-      description: "Professional management and operation of all production equipment."
-    },
-    {
-      title: "Live Supervision",
-      description: "Real-time monitoring and supervision of all production activities."
-    },
-    {
-      title: "Video Editing",
-      description: "Professional post-production editing to create the final narrative flow."
-    },
-    {
-      title: "VFX",
-      description: "Visual effects creation and integration for enhanced storytelling."
-    },
-    {
-      title: "Sound Design/Mixing",
-      description: "Creating immersive audio experiences through professional sound design and mixing."
-    },
-    {
-      title: "ADR",
-      description: "Automated Dialogue Replacement for crystal clear audio quality."
-    },
-    {
-      title: "Foley",
-      description: "Creating custom sound effects to enhance the audio experience."
-    },
-    {
-      title: "Color Grading",
-      description: "Professional color correction and grading for visual consistency and mood."
-    },
-    {
-      title: "Subtitling",
-      description: "Creating accurate and professional subtitles for accessibility and international distribution."
-    },
-    {
-      title: "Mastering",
-      description: "Final mastering process to ensure optimal quality across all platforms."
-    },
-    {
-      title: "Trailer Creation",
-      description: "Compelling trailer production to promote and market your film effectively."
-    },
-    {
-      title: "Deliverables Prep",
-      description: "Preparing all final deliverables in various formats for distribution."
+      title: "Color Grading & Sound Design",
+      description: "Mood-setting colour correction and immersive sound design for a fully professional, cinematic finish."
     },
   ];
 

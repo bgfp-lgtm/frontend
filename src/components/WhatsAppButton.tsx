@@ -7,7 +7,7 @@ import { BsWhatsapp } from "react-icons/bs";
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
     // Replace with your actual WhatsApp number
-    const phoneNumber = "1234567890"; // Add country code without +
+    const phoneNumber = "447776842718"; // Add country code without +
     const message = "Hello! I'm interested in your services. Can you help me?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     

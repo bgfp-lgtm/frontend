@@ -244,7 +244,7 @@ export default function OtherServices() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-800">Phone</p>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+44 7776 842718</p>
                   </div>
                 </div>
 
@@ -272,7 +272,7 @@ export default function OtherServices() {
               {/* Action Buttons */}
               <div className="mt-6 space-y-3">
                 <button
-                  onClick={() => window.open('tel:+15551234567')}
+                  onClick={() => window.open('tel:+447776842718')}
                   className="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center justify-center"
                 >
                   <BsTelephone className="w-4 h-4 mr-2" />

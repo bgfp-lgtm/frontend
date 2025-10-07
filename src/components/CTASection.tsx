@@ -2,9 +2,16 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FaFilm, FaHandPeace } from "react-icons/fa";
+import { FaFilm, FaHandPeace, FaMapMarkerAlt, FaPhone, FaClock } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 export default function CTASection() {
+  const router = useRouter();
+
+  const handleGetQuoteClick = () => {
+    router.push('/contact');
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -13,8 +20,8 @@ export default function CTASection() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="bg-gray-900 py-20 md:py-32"
     >
-      <div className="max-w-6xl mx-auto px-4 md:px-20">
-        <div className="text-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-20">
+        <div className="text-center mb-16">
           {/* Top Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -41,19 +48,82 @@ export default function CTASection() {
             <br />
             into reality.
           </motion.h2>
+        </div>
 
-          {/* CTA Button */}
+        {/* Three Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* Our Address Card */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-            className="inline-flex items-center gap-3 text-white hover:text-red-500 transition-colors duration-300 cursor-pointer group"
+            className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-red-500/50 transition-all duration-300 group"
           >
-            <FaHandPeace className="text-2xl group-hover:scale-110 transition-transform duration-300" />
-            <span className="text-lg font-semibold uppercase tracking-wide underline decoration-white underline-offset-4 group-hover:decoration-red-500 transition-colors duration-300">
-              GET YOUR QUOTE NOW
-            </span>
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-6 group-hover:bg-red-500/30 transition-colors duration-300">
+                <FaMapMarkerAlt className="text-red-500 text-2xl" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Our Address</h3>
+              <p className="text-gray-300 leading-relaxed">
+                123 Creative Street<br />
+                London, UK<br />
+                SW1A 1AA
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Contact Us Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+            className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-red-500/50 transition-all duration-300 group"
+          >
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-6 group-hover:bg-red-500/30 transition-colors duration-300">
+                <FaPhone className="text-red-500 text-2xl" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Contact Us</h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                +44 7776 842718<br />
+                birthgiverfilmproductions@gmail.com
+              </p>
+              <motion.button
+                onClick={handleGetQuoteClick}
+                className="inline-flex items-center gap-2 text-red-500 hover:text-red-400 transition-colors duration-300 font-semibold group/btn"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaHandPeace className="text-lg group-hover/btn:rotate-12 transition-transform duration-300" />
+                Get Your Quote
+              </motion.button>
+            </div>
+          </motion.div>
+
+          {/* Opening Hours Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 1.0 }}
+            className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-red-500/50 transition-all duration-300 group"
+          >
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-6 group-hover:bg-red-500/30 transition-colors duration-300">
+                <FaClock className="text-red-500 text-2xl" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Opening Hours</h3>
+              <div className="text-gray-300 leading-relaxed space-y-1">
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+                <div className="mt-4 p-2 bg-red-500/20 rounded-lg">
+                  <p className="text-red-400 text-sm font-medium">24/7 Emergency Support</p>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

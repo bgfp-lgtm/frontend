@@ -22,99 +22,27 @@ interface JobPosition {
 const jobPositions: JobPosition[] = [
   {
     id: 1,
-    title: "Senior Video Editor",
-    department: "Post-Production",
+    title: "Film Production Intern",
+    department: "Production",
     location: "London, UK",
-    type: "Full-time",
-    description: "We're looking for a creative and technically skilled Senior Video Editor to join our post-production team. You'll work on diverse projects from commercials to documentaries, bringing stories to life through expert editing.",
+    type: "Unpaid Internship",
+    description: "Join our dynamic film production team as an intern and gain hands-on experience in all aspects of filmmaking. This is an excellent opportunity to learn from industry professionals while contributing to real projects and building your portfolio.",
     requirements: [
-      "5+ years of professional video editing experience",
-      "Proficiency in Adobe Premiere Pro, After Effects, and DaVinci Resolve",
-      "Strong understanding of color grading and audio mixing",
-      "Experience with 4K and HDR workflows",
-      "Portfolio demonstrating creative storytelling and technical excellence",
-      "Knowledge of current industry trends and techniques"
+      "Currently enrolled in or recently graduated from film/media studies",
+      "Basic understanding of film production processes",
+      "Strong passion for storytelling and visual media",
+      "Willingness to learn and take on various tasks",
+      "Good communication and teamwork skills",
+      "Availability for flexible hours during production periods"
     ],
     benefits: [
-      "Competitive salary (£45,000 - £65,000)",
-      "Flexible working arrangements",
-      "Professional development budget",
-      "Health insurance",
-      "Creative freedom on projects"
-    ],
-    isRemote: true
-  },
-  {
-    id: 2,
-    title: "AI Integration Specialist",
-    department: "Technology",
-    location: "London, UK",
-    type: "Full-time",
-    description: "Join our innovative team as an AI Integration Specialist, where you'll help us pioneer the future of film production by integrating cutting-edge AI tools into our creative workflows.",
-    requirements: [
-      "Degree in Computer Science, AI, or related field",
-      "3+ years experience with AI/ML frameworks (TensorFlow, PyTorch)",
-      "Experience with video processing and computer vision",
-      "Knowledge of automation tools and workflows",
-      "Strong problem-solving and analytical skills",
-      "Passion for creative technology applications"
-    ],
-    benefits: [
-      "Competitive salary (£50,000 - £70,000)",
-      "Stock options",
-      "Latest technology equipment",
-      "Conference attendance budget",
-      "Research and development time"
+      "Hands-on experience in professional film production",
+      "Portfolio building opportunities",
+      "Mentorship from industry professionals",
+      "Networking opportunities within the film industry",
+      "Letter of recommendation upon successful completion"
     ],
     isRemote: false
-  },
-  {
-    id: 3,
-    title: "Creative Director",
-    department: "Creative",
-    location: "London, UK",
-    type: "Full-time",
-    description: "Lead our creative vision and guide our team in developing compelling visual narratives. This role requires both creative excellence and strong leadership skills to drive our projects forward.",
-    requirements: [
-      "8+ years in creative direction or similar role",
-      "Strong portfolio of commercial and creative work",
-      "Experience leading creative teams",
-      "Excellent communication and presentation skills",
-      "Knowledge of current design and film trends",
-      "Bachelor's degree in Film, Design, or related field"
-    ],
-    benefits: [
-      "Competitive salary (£60,000 - £80,000)",
-      "Performance bonuses",
-      "Creative project ownership",
-      "Team leadership opportunities",
-      "Industry networking events"
-    ],
-    isRemote: false
-  },
-  {
-    id: 4,
-    title: "Marketing Coordinator",
-    department: "Marketing",
-    location: "London, UK",
-    type: "Full-time",
-    description: "Support our marketing efforts by coordinating campaigns, managing social media, and helping to promote our services to potential clients in the film and advertising industry.",
-    requirements: [
-      "2+ years marketing experience",
-      "Strong social media management skills",
-      "Content creation abilities",
-      "Analytics and reporting experience",
-      "Excellent written and verbal communication",
-      "Bachelor's degree in Marketing or related field"
-    ],
-    benefits: [
-      "Competitive salary (£30,000 - £40,000)",
-      "Marketing training and development",
-      "Flexible working hours",
-      "Team collaboration opportunities",
-      "Career growth potential"
-    ],
-    isRemote: true
   }
 ];
 
@@ -142,14 +70,14 @@ const companyValues = [
 ];
 
 const perks = [
-  "Flexible working arrangements",
-  "Professional development budget",
-  "Health and wellness benefits",
-  "Creative project ownership",
-  "Latest technology and equipment",
-  "Team building activities",
-  "Industry networking opportunities",
-  "Performance bonuses"
+  "Hands-on film production experience",
+  "Professional mentorship program",
+  "Portfolio building opportunities",
+  "Industry networking events",
+  "Access to latest equipment",
+  "Real project involvement",
+  "Letter of recommendation",
+  "Career guidance and advice"
 ];
 
 export default function Careers({}: Props) {
@@ -165,15 +93,15 @@ export default function Careers({}: Props) {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Join Our Creative Team
+              Start Your Film Career
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Be part of the future of film production. We're looking for passionate, innovative individuals to help us create extraordinary visual content.
+              Gain hands-on experience in professional film production. Join our internship program and learn from industry experts while building your portfolio.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <span className="bg-red-500/20 text-red-300 px-4 py-2 rounded-full">Remote Friendly</span>
-              <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full">Competitive Salaries</span>
-              <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full">Growth Opportunities</span>
+              <span className="bg-red-500/20 text-red-300 px-4 py-2 rounded-full">Hands-on Experience</span>
+              <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full">Professional Mentorship</span>
+              <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full">Portfolio Building</span>
             </div>
           </motion.div>
         </div>
@@ -233,10 +161,10 @@ export default function Careers({}: Props) {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Current Openings
+              Internship Opportunity
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Explore our current job opportunities and find the perfect role to advance your career in film production.
+              Take the first step in your film production career with our hands-on internship program designed to give you real-world experience.
             </p>
           </motion.div>
 
@@ -323,10 +251,10 @@ export default function Careers({}: Props) {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Perks & Benefits
+              What You'll Gain
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We believe in taking care of our team. Here's what we offer to ensure your success and well-being.
+              Our internship program is designed to provide valuable experience and skills that will kickstart your career in film production.
             </p>
           </motion.div>
 
@@ -359,10 +287,10 @@ export default function Careers({}: Props) {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How to Apply
+              How to Apply for Internship
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Ready to join our team? Here's our simple application process.
+              Ready to start your film production journey? Here's how to apply for our internship program.
             </p>
           </motion.div>
 

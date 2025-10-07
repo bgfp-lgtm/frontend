@@ -1,20 +1,39 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import CTASection from "@/components/CTASection";
 import VideoModal from "@/components/VideoModal";
+import { getProject } from "@/data/loader";
 
 export default function ProjectsPage() {
-  const projects = [
-    { id: "enq3FsysMk0", title: "MARKS AND SPENCER LONDON", image: "/sony.png" },
-    { id: "LittDjvruDs", title: "Carlsberg Smooth Soda", image: "/carlsberg.jpg" },
-    { id: "ewj1P99iAC4", title: "KIA MOTORS", image: "/kia.jpg" },
-  ];
-
+  const [projects, setProjects] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [openVideoId, setOpenVideoId] = useState<string | null>(null);
   const [openTitle, setOpenTitle] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const { data } = await getProject();
+        setProjects(data || []);
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+        setProjects([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
+  // Extract video ID from YouTube embed URL
+  const extractVideoId = (url: string) => {
+    const match = url.match(/embed\/([^?]+)/);
+    return match ? match[1] : null;
+  };
 
   const buildIframeSrc = (videoId: string, isHovered: boolean) => {
     const baseSrc = `https://www.youtube.com/embed/${videoId}`;
@@ -75,30 +94,43 @@ export default function ProjectsPage() {
             <p className="text-gray-600">Click a project to watch its video.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project, index) => {
-              return (
-                <button
-                  key={project.id}
-                  onClick={() => { setOpenVideoId(project.id); setOpenTitle(project.title); }}
-                  className="group text-left rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
-                >
-                  <div className="w-full aspect-video relative bg-black">
-                    <img
-                      src={project.image}
-                      alt={`${project.title} image`}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                  </div>
-                  <div className="p-4">
-                    <h2 className="text-lg font-semibold text-gray-900">{project.title}</h2>
-                    <p className="text-sm text-gray-600">Tap to watch on YouTube.</p>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
+          {loading ? (
+            <div className="flex justify-center items-center py-20">
+              <div className="text-lg text-gray-600">Loading projects...</div>
+            </div>
+          ) : projects.length === 0 ? (
+            <div className="flex justify-center items-center py-20">
+              <div className="text-lg text-gray-600">No projects available at the moment.</div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {projects.map((project, index) => {
+                const videoId = extractVideoId(project.link);
+                if (!videoId) return null;
+
+                return (
+                  <button
+                    key={project.id}
+                    onClick={() => { setOpenVideoId(videoId); setOpenTitle(project.title); }}
+                    className="group text-left rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                  >
+                    <div className="w-full aspect-video relative bg-black">
+                      <img
+                        src={project.image.url}
+                        alt={`${project.title} image`}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                    </div>
+                    <div className="p-4">
+                      <h2 className="text-lg font-semibold text-gray-900">{project.title}</h2>
+                      <p className="text-sm text-gray-600">Tap to watch on YouTube.</p>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
       <CTASection />

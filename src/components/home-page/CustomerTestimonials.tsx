@@ -49,7 +49,7 @@ const testimonials: Testimonial[] = [
       "Best film production company in the UK for AI automation tools and marketing. It’s not just a film production company. My real estate company had some content filmed. It is by far the best content on the internet.",
     rating: 5,
     image:
-      "https://images.unsplash.com/photo-1565984965895-0dab35be88d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGJ1c3NpbmVzcyUyMHdvbWVuJ3xlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1708275672423-837db6d3d700?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyMnx0b3dKWkZza3BHZ3x8ZW58MHx8fHx8",
   },
 ];
 

@@ -104,7 +104,7 @@ export default function Services({}: Props) {
               key={service.id}
               variants={itemVariants}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="group relative bg-white cursor-pointer rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="group relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               {/* Image Container */}
               <div className="relative h-64 overflow-hidden">
@@ -132,10 +132,10 @@ export default function Services({}: Props) {
                 </p>
 
                 {/* Learn More Button */}
-                {service.title === "Software & Development" ? (
+                {service.title === "Software & Website Development" ? (
                   <Link
                     href="/software-development"
-                    className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center"
+                    className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center pointer-events-auto"
                   >
                     Learn More
                     <svg
@@ -155,7 +155,7 @@ export default function Services({}: Props) {
                 ) : service.title === "End-to-End Film Production" ? (
                   <Link
                     href="/film-production"
-                    className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center"
+                    className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center pointer-events-auto"
                   >
                     Learn More
                     <svg
@@ -175,7 +175,7 @@ export default function Services({}: Props) {
                 ) : service.title === "Marketing & Strategy" ? (
                   <Link
                     href="/marketing-strategy"
-                    className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center"
+                    className="mt-4 text-red-600 font-medium text-sm hover:text-red-800 transition-colors inline-flex items-center pointer-events-auto"
                   >
                     Learn More
                     <svg
