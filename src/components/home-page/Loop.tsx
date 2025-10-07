@@ -154,7 +154,7 @@ export default function Loop({}: Props) {
 
           <div
             className="relative overflow-hidden rounded-2xl bg-white "
-            style={{ height: 140 }}
+            style={{ height: 210 }}
           >
             <div className="absolute inset-0  dark:from-gray-800 dark:to-gray-700 opacity-50"></div>
             <div className="relative z-10 h-full flex items-center">
@@ -163,7 +163,7 @@ export default function Loop({}: Props) {
                   logos={techLogos}
                   speed={50}
                   direction="left"
-                  logoHeight={70}
+                  logoHeight={120}
                   gap={60}
                   pauseOnHover
                   fadeOut
