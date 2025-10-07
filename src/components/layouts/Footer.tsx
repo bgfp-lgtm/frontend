@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { BsInstagram, BsYoutube, BsFacebook, BsLinkedin } from "react-icons/bs";
 
@@ -47,22 +48,39 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li className="hover:text-white transition-colors">Development</li>
-              <li className="hover:text-white transition-colors">Pre-Production</li>
-              <li className="hover:text-white transition-colors">Production</li>
-              <li className="hover:text-white transition-colors">Post-Production</li>
-              <li className="hover:text-white transition-colors">Marketing & Digital</li>
+              <li className="hover:text-white transition-colors">
+                <Link href="/services">All Services</Link>
+              </li>
+              <li className="hover:text-white transition-colors">
+                <Link href="/film-production">Film Production</Link>
+              </li>
+              <li className="hover:text-white transition-colors">
+                <Link href="/software-development">Software Development</Link>
+              </li>
+              <li className="hover:text-white transition-colors">
+                <Link href="/marketing-strategy">Marketing Strategy</Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
-              <li className="hover:text-white transition-colors">About Us</li>
-              <li className="hover:text-white transition-colors">Our Work</li>
-              <li className="hover:text-white transition-colors">Careers</li>
-              <li className="hover:text-white transition-colors">Contact</li>
-              <li className="hover:text-white transition-colors">FAQs</li>
+              <li className="hover:text-white transition-colors">
+                <Link href="/about-us">About Us</Link>
+              </li>
+              <li className="hover:text-white transition-colors">
+                <Link href="/projects">Our Work</Link>
+              </li>
+              <li className="hover:text-white transition-colors">
+                <Link href="/blog">Blog</Link>
+              </li>
+              <li className="hover:text-white transition-colors">
+                <Link href="/careers">Careers</Link>
+              </li>
+              <li className="hover:text-white transition-colors">
+                <Link href="/contact">Contact</Link>
+              </li>
             </ul>
           </div>
 
@@ -98,11 +116,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
           <div>© {new Date().getFullYear()} Birthgiver Film Productions</div>
-          <ul className="flex items-center gap-6">
-            <li className="hover:text-white transition-colors"><a href="#">Privacy</a></li>
-            <li className="hover:text-white transition-colors"><a href="#">Terms</a></li>
-            <li className="hover:text-white transition-colors"><a href="#">Cookies</a></li>
-          </ul>
+          {/* Legal pages removed until implemented */}
         </div>
       </div>
     </motion.footer>
