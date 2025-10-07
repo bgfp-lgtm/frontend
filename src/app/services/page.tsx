@@ -71,8 +71,7 @@ export default function ServicesPage() {
           name: "Budgeting & Production Scheduling",
           description:
             "Maintain complete creative and financial control. We provide clear, realistic budgets and efficient production schedules that keep your project on track and within budget, without ever compromising on quality.",
-          image:
-            "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop",
+          image: "/budget.webp",
         },
         {
           name: "Principal Photography / Filming",
@@ -129,11 +128,10 @@ export default function ServicesPage() {
           name: "Film Branding & Identity Design",
           description:
             "Craft a unique visual DNA that makes your project instantly recognizable and deeply memorable. We develop powerful film branding and visual identity systems—from logos to colour palettes—that build lasting audience connection and drive recognition and loyalty across the UK and beyond.",
-          image:
-            "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?q=80&w=1200&auto=format&fit=crop",
+          image: "/film.png",
         },
         {
-          name: "Trailer & Promo Video Editing",
+          name: "Brand Campaing & Video Editing",
           description:
             "Create buzz-worthy previews that hook viewers from the first second and compel them to share. Our expert trailer and promo editing crafts compelling narratives that capture the essence of your story—perfect for launching your project to a global audience.",
           image: "/promo.webp",
@@ -156,15 +154,13 @@ export default function ServicesPage() {
           name: "Festival Submission Strategy",
           description:
             "Navigate the film festival circuit with a clear plan to maximise awards, exposure, and opportunities. We identify the best-fit festivals to increase your chances of awards, screenings, and recognition—key for UK filmmakers targeting global audiences.",
-          image:
-            "https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3RyYXRlZ3l8ZW58MHx8MHx8fDA%3D",
+          image: "/festival.jpg",
         },
         {
           name: "PR & Influencer Partnerships",
           description:
             "Leverage trusted voices to expand your reach and build undeniable credibility. We connect your project with authentic PR and influencer partners to create genuine buzz and drive engagement—a powerful growth tactic in the UK.",
-          image:
-            "https://plus.unsplash.com/premium_photo-1677846526184-86a9d87b5394?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8UFJ8ZW58MHx8MHx8fDA%3D",
+          image: "/pr.jpg",
         },
         {
           name: "SEO for Films & Video",
@@ -177,8 +173,7 @@ export default function ServicesPage() {
           name: "Social Media Campaigns & Community Engagement",
           description:
             "Foster a dedicated community and turn viewers into passionate advocates. We launch engaging social media campaigns and community initiatives that drive interaction and sharing—building long-term loyalty around your project.",
-          image:
-            "https://images.unsplash.com/photo-1519222970733-f546218fa6d7?q=80&w=1200&auto=format&fit=crop",
+          image: "/social.jpg",
         },
       ],
     },
@@ -283,7 +278,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Services Section */}
-      <div className="w-full px-4 md:px-20 py-16  mb-20">
+      <div className="w-full px-4 md:px-20 py-16 ">
         <div className="w-full mx-auto">
           <div className="space-y-16">
             {services.map((service, index) => (
@@ -302,36 +297,60 @@ export default function ServicesPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {service.subServices.map((subService, subIndex) => (
-                      <div
-                        key={subIndex}
-                        className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all"
-                      >
-                        <div className="relative h-50 w-full overflow-hidden">
-                          <Image
-                            src={
-                              subService.image ||
-                              service.images?.[
-                                subIndex % (service.images?.length || 1)
-                              ] ||
-                              "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963f?q=80&w=1200&auto=format&fit=crop"
-                            }
-                            alt={subService.name}
-                            fill
-                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            className="object-cover group-hover:scale-105 transition-transform duration-300"
-                            priority={subIndex < 3}
-                          />
-                        </div>
-                        <div className="p-6">
-                          <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                            {subService.name}
-                          </h4>
-                          <p className="text-gray-600 text-sm leading-relaxed">
-                            {subService.description}
-                          </p>
+                      <div key={subIndex}>
+                        <div className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+                          <div className="relative h-50 w-full overflow-hidden">
+                            <Image
+                              src={
+                                subService.image ||
+                                service.images?.[
+                                  subIndex % (service.images?.length || 1)
+                                ] ||
+                                "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963f?q=80&w=1200&auto=format&fit=crop"
+                              }
+                              alt={subService.name}
+                              fill
+                              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                              className="object-cover group-hover:scale-105 transition-transform duration-300"
+                              priority={subIndex < 3}
+                            />
+                          </div>
+                          <div className="p-6">
+                            <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                              {subService.name}
+                            </h4>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                              {subService.description}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     ))}
+                    {/* Get Your Quote Card */}
+                    <div className="group bg-gradient-to-br from-red-600 to-red-700 border border-red-600 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+                      <div className="relative h-50 w-full overflow-hidden bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
+                        <div className="text-center text-white">
+                          <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <FaArrowRight className="w-8 h-8" />
+                          </div>
+                          <h4 className="text-lg font-semibold mb-2">
+                            Ready to Get Started?
+                          </h4>
+                          <p className="text-sm opacity-90 mb-4">
+                            Get your personalized quote today
+                          </p>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <Link
+                          href="/contact"
+                          className="w-full inline-flex items-center justify-center px-6 py-3 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+                        >
+                          Get Your Quote
+                          <FaArrowRight className="w-4 h-4 ml-2" />
+                        </Link>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="text-center mt-10 md:hidden">

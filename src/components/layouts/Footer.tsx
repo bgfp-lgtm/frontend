@@ -21,7 +21,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           <div>
             <h3 className="text-white text-2xl font-bold tracking-wide mb-3">
               Birthgiver
@@ -81,6 +81,18 @@ export default function Footer() {
               <li className="hover:text-white transition-colors">
                 <Link href="/contact">Contact</Link>
               </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-4">We Work With</h4>
+            <ul className="space-y-2 text-sm">
+              <li className="text-gray-400">United Kingdom</li>
+              <li className="text-gray-400">United States</li>
+              <li className="text-gray-400">India</li>
+              <li className="text-gray-400">Canada</li>
+              <li className="text-gray-400">Australia</li>
+              <li className="text-gray-400 text-red-400">+ 6 more countries</li>
             </ul>
           </div>
 
