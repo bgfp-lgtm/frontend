@@ -176,60 +176,78 @@ export default function IntroSection() {
                 </motion.p>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <motion.div
-                    className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-                    whileHover={{ y: -4 }}
-                  >
-                    <div className="h-10 w-10 rounded-lg bg-red-600 mb-3 flex items-center justify-center">
-                      <div className="h-5 w-5 border-2 border-white rounded" />
-                    </div>
-                    <p className="font-semibold text-gray-900 text-base mb-1">
-                      Film Production
-                    </p>
-                    <p className="text-gray-500 text-sm">
-                      Concept to final cut
-                    </p>
-                  </motion.div>
-                  <motion.div
-                    className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
-                    whileHover={{ y: -4 }}
-                  >
-                    <div className="h-10 w-10 rounded-lg bg-red-600 mb-3 flex items-center justify-center">
-                      <div className="h-5 w-5 border-2 border-white rounded" />
-                    </div>
-                    <p className="font-semibold text-gray-900 text-base mb-1">
-                      Web & Software
-                    </p>
-                    <p className="text-gray-500 text-sm">
-                      Design, build, scale
-                    </p>
-                  </motion.div>
-                  <motion.div
-                    className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.4, ease: "easeOut", delay: 0.3 }}
-                    whileHover={{ y: -4 }}
-                  >
-                    <div className="h-10 w-10 rounded-lg bg-red-600 mb-3 flex items-center justify-center">
-                      <div className="h-5 w-5 border-2 border-white rounded" />
-                    </div>
-                    <p className="font-semibold text-gray-900 text-base mb-1">
-                      Marketing Strategy
-                    </p>
-                    <p className="text-gray-500 text-sm">
-                      Reach and conversion
-                    </p>
-                  </motion.div>
+                  <Link href={"/film-production"}>
+                    <motion.div
+                      className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{
+                        duration: 0.4,
+                        ease: "easeOut",
+                        delay: 0.1,
+                      }}
+                      whileHover={{ y: -4 }}
+                    >
+                      <div className="h-10 w-10 rounded-lg bg-red-600 mb-3 flex items-center justify-center">
+                        <div className="h-5 w-5 border-2 border-white rounded" />
+                      </div>
+                      <p className="font-semibold text-gray-900 text-base mb-1">
+                        Film Production
+                      </p>
+                      <p className="text-gray-500 text-sm">
+                        Concept to final cut
+                      </p>
+                    </motion.div>
+                  </Link>
+                  <Link href={"/software-development"}>
+                    <motion.div
+                      className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{
+                        duration: 0.4,
+                        ease: "easeOut",
+                        delay: 0.2,
+                      }}
+                      whileHover={{ y: -4 }}
+                    >
+                      <div className="h-10 w-10 rounded-lg bg-red-600 mb-3 flex items-center justify-center">
+                        <div className="h-5 w-5 border-2 border-white rounded" />
+                      </div>
+                      <p className="font-semibold text-gray-900 text-base mb-1">
+                        Web & Software
+                      </p>
+                      <p className="text-gray-500 text-sm">
+                        Design, build, scale
+                      </p>
+                    </motion.div>
+                  </Link>
+                  <Link href={"/marketing-strategy"}>
+                    <motion.div
+                      className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{
+                        duration: 0.4,
+                        ease: "easeOut",
+                        delay: 0.3,
+                      }}
+                      whileHover={{ y: -4 }}
+                    >
+                      <div className="h-10 w-10 rounded-lg bg-red-600 mb-3 flex items-center justify-center">
+                        <div className="h-5 w-5 border-2 border-white rounded" />
+                      </div>
+                      <p className="font-semibold text-gray-900 text-base mb-1">
+                        Marketing Strategy
+                      </p>
+                      <p className="text-gray-500 text-sm">
+                        Reach and conversion
+                      </p>
+                    </motion.div>
+                  </Link>
                   {/* <motion.div
                     className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
                     initial={{ opacity: 0, y: 10 }}
