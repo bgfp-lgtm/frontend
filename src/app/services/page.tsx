@@ -55,7 +55,7 @@ export default function ServicesPage() {
           description:
             "Scouting ideal and permitted locations; designing and preparing sets that enhance your story's visual impact.",
           image:
-            "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1668911128137-2f40fb6bde1d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fExvY2F0aW9uJTIwU2NvdXRpbmclMjAlMjYlMjBTZXQlMjBEZXNpZ258ZW58MHx8MHx8fDA%3D",
         },
         {
           name: "Budgeting & Production Scheduling",
@@ -83,7 +83,7 @@ export default function ServicesPage() {
           description:
             "Cinematic camera work, lighting and composition that elevate your film's visual narrative.",
           image:
-            "https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1512025316832-8658f04f8a83?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Q2luZW1hdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D",
         },
         {
           name: "Post-Production: Editing & VFX",
@@ -160,7 +160,7 @@ export default function ServicesPage() {
           description:
             "Leverage online PR and influencer partnerships to expand reach and build credibility.",
           image:
-            "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
+            "https://plus.unsplash.com/premium_photo-1677846526184-86a9d87b5394?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8UFJ8ZW58MHx8MHx8fDA%3D",
         },
         {
           name: "SEO for Films & Video",
@@ -200,56 +200,56 @@ export default function ServicesPage() {
         {
           name: "Custom Web Application Development",
           description:
-            "Scalable, secure, and tailored apps for business workflows.",
+            "Build powerful, scalable, and secure web applications tailored to your unique business workflows. Our expert developers create custom web solutions from the ground up, ensuring they are perfectly aligned with your operational needs. We focus on delivering high-performance applications that streamline processes, boost efficiency, and drive growth for your business.",
           image:
             "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Mobile App Development",
           description:
-            "Native and cross-platform apps (iOS, Android, Flutter, React Native).",
+            "Engage your customers on the go with our top-tier mobile app development services. We specialize in creating high-performance native and cross-platform applications for both iOS and Android. Whether you need a native iOS app, an Android app, or a cross-platform solution with Flutter or React Native, our team has the expertise to build an app that delivers a seamless user experience and achieves your business goals.",
           image:
             "https://images.unsplash.com/photo-1494173853739-c21f58b16055?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "ERP & CRM Solutions",
           description:
-            "End-to-end enterprise systems for managing operations, customers, and resources.",
+            "Streamline your business operations and enhance customer relationships with our end-to-end ERP and CRM solutions. We provide comprehensive enterprise systems that help you manage your operations, customers, and resources more effectively. Our solutions are customized to your industry and business size, enabling you to improve efficiency, make data-driven decisions, and foster long-term customer loyalty.",
           image:
             "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "API Development & Integration",
           description:
-            "Building and connecting APIs for seamless system communication.",
+            "Connect your systems and applications for seamless data exchange with our expert API development and integration services. We build robust, secure, and well-documented APIs that enable your software to communicate flawlessly. Our team can also integrate third-party APIs to extend the functionality of your existing applications, ensuring a smooth and efficient workflow.",
           image:
             "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "Cloud Solutions & Deployment",
           description:
-            "Cloud-native apps, migration, and serverless architecture on AWS, Azure, GCP.",
+            "Leverage the power of the cloud with our comprehensive cloud solutions and deployment services. We specialize in building cloud-native applications, migrating existing systems to the cloud, and implementing serverless architecture on leading platforms like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). Our solutions are designed to be scalable, secure, and cost-effective, helping you to innovate faster and reduce your IT overhead.",
           image:
             "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "E-Commerce Platforms",
           description:
-            "Custom online stores with payment integrations, subscriptions, and multi-language support.",
+            "Launch a successful online store with our custom e-commerce platform development services. We create feature-rich online stores with secure payment gateway integrations, subscription management, and multi-language support to help you reach a global audience. Our e-commerce solutions are designed to provide an exceptional shopping experience for your customers and drive online sales for your business.",
           image:
-            "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1657256031812-4702fe316f1b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEUtQ29tbWVyY2UlMjBQbGF0Zm9ybXN8ZW58MHx8MHx8fDA%3D",
         },
         {
           name: "Automation & Workflow Tools",
           description:
-            "RPA, bots, and internal tools to reduce manual tasks and improve efficiency.",
+            "Boost your business efficiency and reduce manual tasks with our custom automation and workflow tools. We develop Robotic Process Automation (RPA) solutions, custom bots, and internal tools to automate repetitive tasks and streamline your business processes. Our goal is to help you save time, reduce errors, and free up your team to focus on more strategic initiatives.",
           image:
             "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1200&auto=format&fit=crop",
         },
         {
           name: "UI/UX Design & Prototyping",
           description:
-            "Modern, intuitive designs focused on usability and clean interfaces.",
+            "Create a lasting impression on your users with our modern and intuitive UI/UX design and prototyping services. We focus on user-centered design principles to create clean, user-friendly interfaces that enhance usability and deliver an exceptional user experience. Our design process includes in-depth research, wireframing, and prototyping to ensure that the final product is both beautiful and easy to use.",
           image:
             "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
         },

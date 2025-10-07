@@ -5,75 +5,61 @@ import CTASection from "@/components/CTASection";
 export default function SoftwareDevelopmentPage() {
   const services = [
     {
-      title: "UI/UX Design & Interactive Tools",
+      title: "Custom Web Application Development",
       description:
-        "Designing intuitive user interfaces and immersive UX experiences for web, apps, or interactive film content.",
+        "Build powerful, scalable, and secure web applications tailored to your business workflows. Our expert developers create custom solutions that streamline processes and drive growth.",
       image:
         "https://images.unsplash.com/photo-1558655146-d09347e92766?w=500&h=300&fit=crop&crop=center",
     },
     {
-      title: "Web & Mobile App Development",
+      title: "Mobile App Development (iOS & Android)",
       description:
-        "Building responsive websites and mobile apps that enhance your film's reach and viewer experience.",
+        "Create high-performance native and cross-platform mobile apps for iOS and Android. Our team specializes in Flutter, React Native, and native development for seamless user experiences.",
       image:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop&crop=center",
     },
     {
-      title: "Concept & Technical Planning",
+      title: "ERP & CRM Solutions",
       description:
-        "Defining software or app concepts, user stories, tech stack, and product roadmap aligned with your film's goals.",
+        "Comprehensive ERP and CRM solutions to streamline operations and enhance customer relationships. Customized enterprise systems that improve efficiency and enable data-driven decisions.",
       image:
         "https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=300&fit=crop&crop=center",
     },
     {
-      title: "Scriptwriting for Software / User Stories",
+      title: "API Development & Integration",
       description:
-        "Creating detailed software specifications, scripts, and user stories for development clarity.",
+        "Build robust, secure APIs and integrate third-party services for seamless system communication. Our expert team ensures flawless data exchange and workflow efficiency.",
       image:
         "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop&crop=center",
     },
     {
-      title: "Feasibility & Market Analysis",
+      title: "Cloud Solutions & Deployment (AWS, Azure, GCP)",
       description:
-        "Evaluating technical, financial, and market feasibility to ensure project success.",
+        "Cloud-native applications, migration services, and serverless architecture on AWS, Azure, and GCP. Scalable, secure, and cost-effective solutions that reduce IT overhead.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center",
     },
-    // {
-    //   title: "Funding Strategy & Pitch Materials",
-    //   description:
-    //     "Crafting investor pitches and funding plans to secure backing for your software / film tech projects.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop&crop=center",
-    // },
     {
-      title: "Team Assembly & Project Management",
+      title: "E-Commerce Platform Development",
       description:
-        "Bringing together expert teams & supervising development using agile methodologies for efficient delivery.",
+        "Custom e-commerce platforms with secure payment integrations, subscription management, and multi-language support. Feature-rich online stores that drive sales and global reach.",
       image:
         "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=300&fit=crop&crop=center",
     },
-
     {
-      title: "Streaming Platform / Integration Solutions",
+      title: "Automation & Workflow Tools",
       description:
-        "Integrating streaming capabilities for live-video, VOD platforms or multi-device streaming.",
+        "Custom automation tools, RPA solutions, and workflow optimization to reduce manual tasks. Save time, minimize errors, and focus your team on strategic initiatives.",
       image:
-        "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&h=300&fit=crop&crop=center",
+        "https://images.unsplash.com/photo-1516110833967-0b5716ca1387?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEF1dG9tYXRpb258ZW58MHx8MHx8fDA%3D",
     },
-
     {
-      title: "Electronic Press Kit (EPK) Hosting & Web Services",
+      title: "UI/UX Design & Prototyping",
       description:
-        "Hosting and maintaining EPKs and websites to showcase your film, cast, and media assets seamlessly.",
+        "Modern, intuitive UI/UX design and prototyping services. User-centered design principles create clean, beautiful interfaces that deliver exceptional user experiences.",
       image:
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&h=300&fit=crop&crop=center",
     },
-    // {
-    //   title: "Rights Acquisition & Legal / Licensing Software Support",
-    //   description: "Guiding rights acquisition, licensing, and digital rights management to legally protect your content.",
-    //   image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500&h=300&fit=crop&crop=center"
-    // },
   ];
 
   return (
@@ -89,8 +75,7 @@ export default function SoftwareDevelopmentPage() {
               Software & Development
             </h1>
             <p className="text-lg md:text-xl max-w-3xl mx-auto">
-              We offer end-to-end software and digital product services covering
-              the full lifecycle from concept to launch and beyond.
+              Comprehensive software development solutions that transform your business ideas into powerful digital products.
             </p>
           </div>
         </div>
@@ -104,8 +89,7 @@ export default function SoftwareDevelopmentPage() {
               Our Development Services
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              From initial concept to final deployment, we provide comprehensive
-              software development solutions tailored to your needs.
+              From web applications to mobile apps, cloud solutions to automation tools, we deliver cutting-edge technology solutions that drive business growth.
             </p>
           </div>
 
