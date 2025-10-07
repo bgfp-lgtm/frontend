@@ -97,9 +97,12 @@ export default function Loop({}: Props) {
         </div>
 
         {/* Enhanced statistics section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center group">
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100 dark:border-gray-700">
+              <div className="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">
+                worked with
+              </div>
               <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                 <CountingNumber
                   end={150}
@@ -109,12 +112,15 @@ export default function Loop({}: Props) {
                 />
               </div>
               <div className="text-gray-600 dark:text-gray-300 font-medium">
-                Trusted Brands
+                global brands 
               </div>
             </div>
           </div>
           <div className="text-center group">
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100 dark:border-gray-700">
+              <div className="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">
+                worked in
+              </div>
               <div className="text-4xl md:text-5xl font-bold text-green-600 dark:text-green-400 mb-2">
                 <CountingNumber
                   end={15}
@@ -124,21 +130,41 @@ export default function Loop({}: Props) {
                 />
               </div>
               <div className="text-gray-600 dark:text-gray-300 font-medium">
-                Worked with Clients
+                countries 
               </div>
             </div>
           </div>
           <div className="text-center group">
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100 dark:border-gray-700">
+              
               <div className="text-4xl md:text-5xl font-bold text-purple-600 dark:text-purple-400 mb-2">
                 <CountingNumber
                   end={12}
                   duration={1800}
+                  suffix="+"
                   className="inline-block"
                 />
               </div>
               <div className="text-gray-600 dark:text-gray-300 font-medium">
-                Years in the Game
+              years of industry experience
+              </div>
+            </div>
+          </div>
+          <div className="text-center group">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100 dark:border-gray-700">
+              <div className="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">
+                {/* intentionally left blank to preserve layout consistency */}
+              </div>
+              <div className="text-4xl md:text-5xl font-bold text-red-600 dark:text-red-400 mb-2">
+                <CountingNumber
+                  end={1500}
+                  duration={2800}
+                  suffix="+"
+                  className="inline-block"
+                />
+              </div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">
+                projects
               </div>
             </div>
           </div>
