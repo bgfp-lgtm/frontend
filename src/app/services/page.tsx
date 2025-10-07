@@ -8,7 +8,22 @@ export default function ServicesPage() {
   const services = [
     {
       title: "End-to-End Film Production: From Concept to Cinematic Final Cut",
-      description: `Our UK-based film production team handles every detail, blending creative vision with meticulous planning to deliver stories that captivate and resonate. We specialize intransforming your concept into a visually stunning narrative, ensuring a smooth, professional process from the first brainstorm to the final cut."Filming in the UK? We will handle everything you need . "Navigating location permits and regulations can be complex. As your local production partner, we manage all the necessary permissions and logistics foryour UK shoot. From historic city streets to scenic national parks, we ensure yourproject is fully compliant and set up for success, so you can focus purely on the creative vision.`,
+      description: (
+        <>
+          Our UK-based film production team handles every detail, blending
+          creative vision with meticulous planning to deliver stories that
+          captivate and resonate. We specialize in transforming your concept
+          into a visually stunning narrative, ensuring a smooth, professional
+          process from the first brainstorm to the final cut.{" "}
+          <span className="text-red-600 font-semibold">Filming in the UK?</span>{" "}
+          We will handle everything you need. Navigating location permits and
+          regulations can be complex. As your local production partner, we
+          manage all the necessary permissions and logistics for your UK shoot.
+          From historic city streets to scenic national parks, we ensure your
+          project is fully compliant and set up for success, so you can focus
+          purely on the creative vision.
+        </>
+      ),
       href: "/film-production",
       video: "/production.mp4",
       icon: FaVideo,
@@ -39,8 +54,7 @@ export default function ServicesPage() {
           name: "Storyboarding & Shot Planning",
           description:
             "Visualize your film before the camera rolls. Our detailed storyboards and precise shot plans ensure cinematic consistency, streamline your filming schedule, and guarantee that every visual element aligns with your creative director’s vision.",
-          image:
-            "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop",
+          image: "/storyboard.webp",
         },
         {
           name: "Casting & Talent Selection",
@@ -66,8 +80,7 @@ export default function ServicesPage() {
           name: "Principal Photography / Filming",
           description:
             "Lights, camera, action. Our skilled crews and industry-standard equipment bring the plan to life, using cinematic techniques to capture high-quality footage that forms the core of your visual story.",
-          image:
-            "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop",
+          image: "/filming.webp",
         },
         {
           name: "Direction & Creative Oversight",
@@ -128,8 +141,7 @@ export default function ServicesPage() {
           name: "Trailer & Promo Video Editing",
           description:
             "Create buzz-worthy previews that hook viewers from the first second and compel them to share. Our expert trailer and promo editing crafts compelling narratives that capture the essence of your story—perfect for launching your project to a global audience.",
-          image:
-            "/promo.webp",
+          image: "/promo.webp",
         },
         {
           name: "Poster & Key Art Design",
