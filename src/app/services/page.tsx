@@ -260,6 +260,8 @@ export default function ServicesPage() {
     <div>
       {/* Hero Section */}
       <div className="relative h-screen overflow-hidden">
+        {" "}
+        {/* new */}
         <video
           autoPlay
           loop
