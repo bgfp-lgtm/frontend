@@ -128,20 +128,19 @@ export default function ServicesPage() {
           name: "Film Branding & Identity Design",
           description:
             "Craft a unique visual DNA that makes your project instantly recognizable and deeply memorable. We develop powerful film branding and visual identity systems—from logos to colour palettes—that build lasting audience connection and drive recognition and loyalty across the UK and beyond.",
-          image: "/film.png",
+          image: "/filmagain.jpeg",
         },
         {
           name: "Brand Campaing & Video Editing",
           description:
             "Create buzz-worthy previews that hook viewers from the first second and compel them to share. Our expert trailer and promo editing crafts compelling narratives that capture the essence of your story—perfect for launching your project to a global audience.",
-          image: "/promo.webp",
+          image: "/brand.jpeg",
         },
         {
           name: "Poster & Key Art Design",
           description:
             "Design stunning visuals that stop scrollers in their tracks, both online and in the real world. We specialize in eye-catching posters and key art that communicate your film's tone and capture attention across digital and print—essential for a successful UK film marketing launch.",
-          image:
-            "https://images.unsplash.com/photo-1543487945-139a97f387d5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9zdGVyJTIwZGVzaWdufGVufDB8fDB8fHww",
+          image: "/poster1.jpeg",
         },
         {
           name: "Press Kits & Media Outreach",
