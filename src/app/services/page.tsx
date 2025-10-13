@@ -131,7 +131,7 @@ export default function ServicesPage() {
           image: "/filmagain.jpeg",
         },
         {
-          name: "Brand Campaing & Video Editing",
+          name: "Brand Campaign & Video Editing",
           description:
             "Create buzz-worthy previews that hook viewers from the first second and compel them to share. Our expert trailer and promo editing crafts compelling narratives that capture the essence of your story—perfect for launching your project to a global audience.",
           image: "/brand.jpeg",
