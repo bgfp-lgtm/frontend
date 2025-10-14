@@ -22,7 +22,7 @@ export async function getBlogs() {
   const url = new URL(path, BASE_URL);
 
   url.search = allBlogsQuery();
-  return await fetchAPI(url.href, { method: "GET", next: { revalidate: 60 } });
+  return await fetchAPI(url.href, { method: "GET" });
 }
 
 const blogBySlugQuery = (slug: string) =>
@@ -45,7 +45,7 @@ export async function getBlogBySlug(slug: string) {
   const url = new URL(path, BASE_URL);
 
   url.search = blogBySlugQuery(slug);
-  return await fetchAPI(url.href, { method: "GET" , next: { revalidate: 60 }});
+  return await fetchAPI(url.href, { method: "GET" });
 }
 
 const projectQuery = () =>
@@ -55,6 +55,9 @@ const projectQuery = () =>
         image: {
           fields: ["url", "name"],
         },
+      },
+      pagination: {
+        pageSize: 100,
       },
     },
     {
@@ -68,5 +71,9 @@ export async function getProject() {
   const url = new URL(path, BASE_URL);
 
   url.search = projectQuery();
-  return await fetchAPI(url.href, { method: "GET" });
+
+  return await fetchAPI(url.href, {
+    method: "GET",
+    next: { revalidate: 0 },
+  });
 }
