@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import CTASection from "@/components/CTASection";
 import VideoModal from "@/components/VideoModal";
@@ -9,8 +9,7 @@ import { getProject } from "@/data/loader";
 export default function ProjectsPage() {
   const [projects, setProjects] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [openVideoId, setOpenVideoId] = useState<string | null>(null);
+  const [openVideoUrl, setOpenVideoUrl] = useState<string | null>(null);
   const [openTitle, setOpenTitle] = useState<string | undefined>(undefined);
 
   useEffect(() => {
@@ -19,7 +18,7 @@ export default function ProjectsPage() {
         const { data } = await getProject();
         setProjects(data || []);
       } catch (error) {
-        console.error('Error fetching projects:', error);
+        console.error("Error fetching projects:", error);
         setProjects([]);
       } finally {
         setLoading(false);
@@ -28,28 +27,6 @@ export default function ProjectsPage() {
 
     fetchProjects();
   }, []);
-
-  // Extract video ID from YouTube embed URL
-  const extractVideoId = (url: string) => {
-    const match = url.match(/embed\/([^?]+)/);
-    return match ? match[1] : null;
-  };
-
-  const buildIframeSrc = (videoId: string, isHovered: boolean) => {
-    const baseSrc = `https://www.youtube.com/embed/${videoId}`;
-    const params = new URLSearchParams({
-      modestbranding: "1",
-      rel: "0",
-      controls: isHovered ? "0" : "1",
-      autoplay: isHovered ? "1" : "0",
-      mute: isHovered ? "1" : "0",
-      playsinline: "1",
-      enablejsapi: "1",
-    });
-    return `${baseSrc}?${params.toString()}`;
-  };
-
-  const getThumbnailUrl = (videoId: string) => `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
   return (
     <div>
@@ -81,7 +58,8 @@ export default function ProjectsPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg md:text-xl max-w-3xl mx-auto"
             >
-              Discover our portfolio of creative projects and see the impact of our work
+              Discover our portfolio of creative projects and see the impact of
+              our work
             </motion.p>
           </div>
         </div>
@@ -90,7 +68,9 @@ export default function ProjectsPage() {
       <div className="w-full px-4 md:px-20 py-16">
         <div className="max-w-6xl mx-auto">
           <div className="mb-10 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Featured Projects
+            </h2>
             <p className="text-gray-600">Click a project to watch its video.</p>
           </div>
 
@@ -100,18 +80,22 @@ export default function ProjectsPage() {
             </div>
           ) : projects.length === 0 ? (
             <div className="flex justify-center items-center py-20">
-              <div className="text-lg text-gray-600">No projects available at the moment.</div>
+              <div className="text-lg text-gray-600">
+                No projects available at the moment.
+              </div>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {projects.map((project, index) => {
-                const videoId = extractVideoId(project.link);
-                if (!videoId) return null;
+                if (!project.link) return null;
 
                 return (
                   <button
                     key={project.id}
-                    onClick={() => { setOpenVideoId(videoId); setOpenTitle(project.title); }}
+                    onClick={() => {
+                      setOpenVideoUrl(project.link);
+                      setOpenTitle(project.title);
+                    }}
                     className="group text-left rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
                   >
                     <div className="w-full aspect-video relative bg-black">
@@ -123,8 +107,12 @@ export default function ProjectsPage() {
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
                     </div>
                     <div className="p-4">
-                      <h2 className="text-lg font-semibold text-gray-900">{project.title}</h2>
-                      <p className="text-sm text-gray-600">Tap to watch on YouTube.</p>
+                      <h2 className="text-lg font-semibold text-gray-900">
+                        {project.title}
+                      </h2>
+                      <p className="text-sm text-gray-600">
+                        Tap to watch video.
+                      </p>
                     </div>
                   </button>
                 );
@@ -135,13 +123,14 @@ export default function ProjectsPage() {
       </div>
       <CTASection />
       <VideoModal
-        open={Boolean(openVideoId)}
-        videoId={openVideoId}
+        open={Boolean(openVideoUrl)}
+        videoUrl={openVideoUrl}
         title={openTitle}
-        onClose={() => { setOpenVideoId(null); setOpenTitle(undefined); }}
+        onClose={() => {
+          setOpenVideoUrl(null);
+          setOpenTitle(undefined);
+        }}
       />
     </div>
   );
 }
-
-
