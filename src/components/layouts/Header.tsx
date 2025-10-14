@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 
-export default function App() {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
@@ -31,6 +31,10 @@ export default function App() {
     { href: "/careers", text: "Careers" },
     { href: "/blog", text: "Blog Posts" },
   ];
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header
@@ -117,7 +121,7 @@ export default function App() {
                 className={`text-2xl text-gray-800 hover:text-red-500 ${
                   isActive ? "font-bold" : "font-semibold"
                 }`}
-                onClick={() => setIsMenuOpen(false)} // Close menu on link click
+                onClick={handleLinkClick}
               >
                 {link.text}
               </Link>
@@ -127,7 +131,7 @@ export default function App() {
           <Link
             href="/contact"
             className="mt-6 inline-flex items-center justify-center px-8 py-4 rounded-xl text-xl font-semibold bg-red-500 text-white transition-colors duration-300 hover:bg-red-600 cursor-pointer"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={handleLinkClick}
           >
             Contact
           </Link>
