@@ -3,13 +3,18 @@
 import React, { useEffect } from "react";
 
 type VideoModalProps = {
-  videoId: string | null;
+  videoUrl: string | null;
   title?: string;
   open: boolean;
   onClose: () => void;
 };
 
-export default function VideoModal({ videoId, title, open, onClose }: VideoModalProps) {
+export default function VideoModal({
+  videoUrl,
+  title,
+  open,
+  onClose,
+}: VideoModalProps) {
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -24,10 +29,16 @@ export default function VideoModal({ videoId, title, open, onClose }: VideoModal
     };
   }, [open, onClose]);
 
-  if (!open) return null;
+  if (!open || !videoUrl) return null;
 
-  const buildIframeSrc = (id: string) => {
-    const baseSrc = `https://www.youtube.com/embed/${id}`;
+  const isYoutubeVideo = videoUrl.includes("youtube.com/embed");
+
+  const buildIframeSrc = (url: string) => {
+    const videoIdMatch = url.match(/embed\/([^?]+)/);
+    const videoId = videoIdMatch ? videoIdMatch[1] : null;
+    if (!videoId) return url;
+
+    const baseSrc = `https://www.youtube.com/embed/${videoId}`;
     const params = new URLSearchParams({
       autoplay: "1",
       modestbranding: "1",
@@ -50,14 +61,22 @@ export default function VideoModal({ videoId, title, open, onClose }: VideoModal
       <div className="relative z-10 w-full max-w-5xl px-4">
         <div className="rounded-xl overflow-hidden shadow-2xl bg-black">
           <div className="w-full aspect-video">
-            {videoId && (
+            {isYoutubeVideo ? (
               <iframe
                 className="w-full h-full"
-                src={buildIframeSrc(videoId)}
+                src={buildIframeSrc(videoUrl)}
                 title={title || "YouTube video"}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
+              />
+            ) : (
+              <video
+                className="w-full h-full"
+                src={videoUrl}
+                title={title || "Video"}
+                controls
+                autoPlay
               />
             )}
           </div>
@@ -73,5 +92,3 @@ export default function VideoModal({ videoId, title, open, onClose }: VideoModal
     </div>
   );
 }
-
-
