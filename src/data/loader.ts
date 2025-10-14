@@ -49,18 +49,13 @@ export async function getBlogBySlug(slug: string) {
 }
 
 const projectQuery = () =>
-  qs.stringify(
-    {
-      populate: {
-        image: {
-          fields: ["url", "name"],
-        },
+  qs.stringify({
+    populate: {
+      image: {
+        fields: ["url", "name"],
       },
     },
-    {
-      encodeValuesOnly: true,
-    }
-  );
+  });
 
 export async function getProject() {
   const path = "/api/projects";
