@@ -4,7 +4,7 @@ import Image from "next/image";
 import CTASection from "@/components/CTASection";
 import { getBlogs } from "@/data/loader";
 import { StrapiImage } from "@/components/StrapiImage";
-import { FaUser, FaCalendar, FaTag } from "react-icons/fa";
+import { FaUser, FaCalendar, FaTag, FaImage } from "react-icons/fa";
 
 export default async function BlogPage() {
   const { data: posts } = await getBlogs();
@@ -12,6 +12,15 @@ export default async function BlogPage() {
   // Separate featured post (first post) from regular posts
   const featuredPost = posts[0];
   const regularPosts = posts.slice(1);
+
+  const NoImagePlaceholder = () => (
+    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+      <div className="text-center text-gray-500">
+        <FaImage className="mx-auto w-12 h-12 mb-2" />
+        <span>No Image Available</span>
+      </div>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-gray-950">
@@ -38,17 +47,21 @@ export default async function BlogPage() {
               >
                 {/* Featured Post Image */}
                 <div className="relative w-full h-80 md:h-96 overflow-hidden">
-                  <StrapiImage
-                    src={featuredPost?.image?.url}
-                    alt={featuredPost?.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  {featuredPost.image && featuredPost.image.url ? (
+                    <StrapiImage
+                      src={featuredPost.image.url}
+                      alt={featuredPost.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <NoImagePlaceholder />
+                  )}
                 </div>
 
                 {/* Featured Post Content */}
                 <div className="p-8 md:p-10">
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
-                    {featuredPost?.title}
+                    {featuredPost.title}
                   </h3>
 
                   {/* Featured Post Metadata */}
@@ -57,7 +70,7 @@ export default async function BlogPage() {
                       <FaUser className="w-4 h-4" />
                       <span>
                         By{" "}
-                        {featuredPost?.by ||
+                        {featuredPost.by ||
                           "bgfp@birthgiverfilmproduction.com"}
                       </span>
                     </div>
@@ -72,14 +85,14 @@ export default async function BlogPage() {
                     </div>
                     <div className="flex items-center gap-2">
                       <FaTag className="w-4 h-4" />
-                      <span>{featuredPost?.category || "Uncategorized"}</span>
+                      <span>{featuredPost.category || "Uncategorized"}</span>
                     </div>
                   </div>
 
                   {/* Featured Post Excerpt */}
                   <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                    {featuredPost?.subtitle ||
-                      featuredPost?.excerpt ||
+                    {featuredPost.subtitle ||
+                      featuredPost.excerpt ||
                       "Discover the latest insights and behind-the-scenes content from our film production team."}
                   </p>
 
@@ -108,7 +121,7 @@ export default async function BlogPage() {
 
               {/* Blog Posts Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {regularPosts?.map((post: any) => (
+                {regularPosts.map((post: any) => (
                   <Link
                     key={post.slug}
                     href={`/blog/${post.slug}`}
@@ -116,11 +129,15 @@ export default async function BlogPage() {
                   >
                     {/* Post Image */}
                     <div className="relative w-full h-64 overflow-hidden">
-                      <StrapiImage
-                        src={post?.image.url}
-                        alt={post?.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
+                      {post.image && post.image.url ? (
+                        <StrapiImage
+                          src={post.image.url}
+                          alt={post.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <NoImagePlaceholder />
+                      )}
                     </div>
 
                     {/* Post Content */}
@@ -146,8 +163,7 @@ export default async function BlogPage() {
                         <div className="flex items-center gap-2">
                           <FaUser className="w-4 h-4" />
                           <span>
-                            By{" "}
-                            {post.by || "bgfp@birthgiverfilmproduction.com"}
+                            By {post.by || "bgfp@birthgiverfilmproduction.com"}
                           </span>
                         </div>
                         <div className="flex items-center gap-2">
