@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 type VideoModalProps = {
   videoUrl: string | null;
@@ -31,24 +32,45 @@ export default function VideoModal({
 
   if (!open || !videoUrl) return null;
 
-  const isYoutubeVideo = videoUrl.includes("youtube.com/embed");
+  const getEmbedUrl = (url: string): string | null => {
+    let embedUrl: string | null = null;
 
-  const buildIframeSrc = (url: string) => {
-    const videoIdMatch = url.match(/embed\/([^?]+)/);
-    const videoId = videoIdMatch ? videoIdMatch[1] : null;
-    if (!videoId) return url;
+    if (url.includes("youtube.com") || url.includes("youtu.be")) {
+      const videoIdMatch =
+        url.match(
+          /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/
+        ) || url.match(/embed\/([^?]+)/);
+      const videoId = videoIdMatch ? videoIdMatch[1] : null;
+      if (videoId) {
+        const params = new URLSearchParams({
+          autoplay: "1",
+          modestbranding: "1",
+          rel: "0",
+          playsinline: "1",
+          enablejsapi: "1",
+          mute: "0",
+        });
+        embedUrl = `https://www.youtube.com/embed/${videoId}?${params.toString()}`;
+      }
+    } else if (url.includes("vimeo.com")) {
+      const videoIdMatch = url.match(/(?:video\/|vimeo\.com\/)(\d+)/);
+      const videoId = videoIdMatch ? videoIdMatch[1] : null;
+      const hashMatch = url.match(/[?&]h=([^&]+)/);
+      const hash = hashMatch ? hashMatch[1] : null;
 
-    const baseSrc = `https://www.youtube.com/embed/${videoId}`;
-    const params = new URLSearchParams({
-      autoplay: "1",
-      modestbranding: "1",
-      rel: "0",
-      playsinline: "1",
-      enablejsapi: "1",
-      mute: "0",
-    });
-    return `${baseSrc}?${params.toString()}`;
+      if (videoId) {
+        let vimeoUrl = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+        if (hash) {
+          vimeoUrl += `&h=${hash}`;
+        }
+        embedUrl = vimeoUrl;
+      }
+    }
+
+    return embedUrl;
   };
+
+  const embedUrl = getEmbedUrl(videoUrl);
 
   return (
     <div
@@ -61,11 +83,11 @@ export default function VideoModal({
       <div className="relative z-10 w-full max-w-5xl px-4">
         <div className="rounded-xl overflow-hidden shadow-2xl bg-black">
           <div className="w-full aspect-video">
-            {isYoutubeVideo ? (
+            {embedUrl ? (
               <iframe
                 className="w-full h-full"
-                src={buildIframeSrc(videoUrl)}
-                title={title || "YouTube video"}
+                src={embedUrl}
+                title={title || "Video"}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
@@ -88,6 +110,15 @@ export default function VideoModal({
         >
           ×
         </button>
+        <a
+          href={videoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute right-10 -top-2 md:right-12 md:-top-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-900 shadow ring-1 ring-black/10 hover:bg-gray-100"
+          aria-label="Open video in new tab"
+        >
+          <FaExternalLinkAlt />
+        </a>
       </div>
     </div>
   );
