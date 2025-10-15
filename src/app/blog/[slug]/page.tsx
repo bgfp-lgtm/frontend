@@ -4,7 +4,14 @@ import Link from "next/link";
 import { StrapiImage } from "@/components/StrapiImage";
 import { getBlogBySlug } from "@/data/loader";
 import Markdown from "react-markdown";
-import { FaUser, FaCalendar, FaTag, FaArrowLeft, FaShare } from "react-icons/fa";
+import {
+  FaUser,
+  FaCalendar,
+  FaTag,
+  FaArrowLeft,
+  FaShare,
+  FaImage,
+} from "react-icons/fa";
 import CTASection from "@/components/CTASection";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -15,6 +22,15 @@ export default async function BlogDetailPage({ params }: Props) {
   const { data } = await getBlogBySlug(slug);
   const post = data?.[0];
   if (!post) return notFound();
+
+  const NoImagePlaceholder = () => (
+    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+      <div className="text-center text-gray-500">
+        <FaImage className="mx-auto w-12 h-12 mb-2" />
+        <span>No Image Available</span>
+      </div>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-gray-950">
@@ -37,12 +53,18 @@ export default async function BlogDetailPage({ params }: Props) {
           <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
             {/* Featured Image */}
             <div className="relative w-full h-96 md:h-[500px] overflow-hidden">
-              <StrapiImage
-                src={post.image.url}
-                alt={post.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              {post.image && post.image.url ? (
+                <>
+                  <StrapiImage
+                    src={post.image.url}
+                    alt={post.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </>
+              ) : (
+                <NoImagePlaceholder />
+              )}
             </div>
 
             {/* Post Content */}
@@ -63,7 +85,9 @@ export default async function BlogDetailPage({ params }: Props) {
               <div className="flex flex-wrap items-center gap-6 mb-8 pb-8 border-b border-gray-200">
                 <div className="flex items-center gap-2 text-gray-500">
                   <FaUser className="w-4 h-4" />
-                  <span>By {post.by || "bgfp@birthgiverfilmproduction.com"}</span>
+                  <span>
+                    By {post.by || "bgfp@birthgiverfilmproduction.com"}
+                  </span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-500">
                   <FaCalendar className="w-4 h-4" />
@@ -100,7 +124,7 @@ export default async function BlogDetailPage({ params }: Props) {
                     <FaArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" />
                     <span>Back to All Posts</span>
                   </Link>
-                  
+
                   <button className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors duration-200 font-medium">
                     <FaShare className="w-4 h-4" />
                     <span>Share Article</span>
