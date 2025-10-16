@@ -98,11 +98,12 @@ export default function ProjectsPage() {
                     }}
                     className="group text-left rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
                   >
-                    <div className="w-full aspect-video relative bg-black">
+                    {/* The container no longer has a fixed aspect ratio */}
+                    <div className="w-full relative bg-black">
                       <img
                         src={project.image.url}
                         alt={`${project.title} image`}
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="w-full h-auto object-cover block"
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
                     </div>
