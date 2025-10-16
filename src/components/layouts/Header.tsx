@@ -41,7 +41,7 @@ export default function Header() {
       className={`relative w-full ${isHomePage ? "bg-black" : "bg-white"}`}
     >
       <div className="flex items-center justify-between px-4 sm:px-8 lg:px-20 py-5">
-        <Link href={"/"}>
+        <Link href={"/"} passHref>
           <Image
             src={"/logo.png"}
             alt="logo"
@@ -61,6 +61,7 @@ export default function Header() {
               <Link
                 key={link.text}
                 href={link.href}
+                passHref
                 className={`text-sm transition-colors duration-300 hover:text-red-500 ${
                   isHomePage ? "text-white" : "text-gray-800"
                 } ${isActive ? "font-semibold" : "font-medium"}`}
@@ -73,6 +74,7 @@ export default function Header() {
 
         <Link
           href="/contact"
+          passHref
           className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-red-500/20 text-red-600 transition-colors duration-300 hover:bg-red-200 cursor-pointer"
         >
           Contact
@@ -118,6 +120,7 @@ export default function Header() {
               <Link
                 key={link.text}
                 href={link.href}
+                passHref
                 className={`text-2xl text-gray-800 hover:text-red-500 ${
                   isActive ? "font-bold" : "font-semibold"
                 }`}
@@ -130,6 +133,7 @@ export default function Header() {
 
           <Link
             href="/contact"
+            passHref
             className="mt-6 inline-flex items-center justify-center px-8 py-4 rounded-xl text-xl font-semibold bg-red-500 text-white transition-colors duration-300 hover:bg-red-600 cursor-pointer"
             onClick={handleLinkClick}
           >
