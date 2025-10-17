@@ -28,7 +28,7 @@ export function StrapiImage({
       src={imageUrl ?? imageFallback}
       loading="lazy"
       alt={alt}
-      unoptimized
+      
       {...(shouldFill ? { fill: true } : { width, height })}
       className={className}
     />
