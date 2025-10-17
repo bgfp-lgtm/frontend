@@ -299,7 +299,7 @@ export default function ServicesPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {service.subServices.map((subService, subIndex) => (
                       <div key={subIndex}>
-                        <div className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+                        <div className="group bg-white border border-gray-200 rounded-xl h-full overflow-hidden hover:shadow-lg transition-all">
                           <div className="relative h-50 w-full overflow-hidden">
                             <Image
                               src={
