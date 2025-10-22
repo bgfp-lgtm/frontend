@@ -25,23 +25,6 @@ export default function ServicesPage() {
         </>
       ),
       href: "/film-production",
-      video: "/production.mp4",
-      icon: FaVideo,
-      color: "from-red-500 to-orange-600",
-      image:
-        "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963f?q=80&w=1600&auto=format&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1517964603305-11c0f7b3e06e?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1469122312224-c5846569feb1?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1464375117522-1311d763d328?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1516410529446-2c777cb7366d?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1524712023315-99a081552848?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1200&auto=format&fit=crop",
-      ],
       subServices: [
         {
           name: "Final Script & Screenplay Development",
@@ -110,19 +93,7 @@ export default function ServicesPage() {
       description:
         "A powerful marketing strategy is not just an option, it's essential. Whether you're a small startup, a growing medium-sized business, or a large enterprise in the UK, our tailored marketing and strategy services are designed to make your project unforgettable and discoverable by a global audience. ",
       href: "/marketing-strategy",
-      video: "/marketing.mp4",
-      icon: FaChartLine,
-      color: "from-green-500 to-teal-600",
-      image:
-        "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?q=80&w=1600&auto=format&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop",
-      ],
+
       subServices: [
         {
           name: "Film Branding & Identity Design",
@@ -184,16 +155,7 @@ export default function ServicesPage() {
       video: "/coding.mp4",
       icon: FaCode,
       color: "from-blue-500 to-purple-600",
-      image:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1527430253228-e93688616381?q=80&w=1200&auto=format&fit=crop",
-      ],
+
       subServices: [
         {
           name: "Custom Web Application Development",
@@ -304,9 +266,6 @@ export default function ServicesPage() {
                             <Image
                               src={
                                 subService.image ||
-                                service.images?.[
-                                  subIndex % (service.images?.length || 1)
-                                ] ||
                                 "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963f?q=80&w=1200&auto=format&fit=crop"
                               }
                               alt={subService.name}
