@@ -2,7 +2,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { StrapiImage } from "@/components/StrapiImage";
-import { getBlogBySlug } from "@/data/loader";
+import { getBlogBySlug, getGlobalData } from "@/data/loader";
 import Markdown from "react-markdown";
 import {
   FaUser,
@@ -18,6 +18,9 @@ type Props = { params: Promise<{ slug: string }> };
 
 export default async function BlogDetailPage({ params }: Props) {
   const { slug } = await params;
+
+  const globalresponse = await getGlobalData();
+  const cta = globalresponse?.data?.cta[0];
 
   const { data } = await getBlogBySlug(slug);
   const post = data?.[0];
@@ -137,7 +140,7 @@ export default async function BlogDetailPage({ params }: Props) {
       </div>
 
       {/* CTA Section */}
-      <CTASection />
+      <CTASection data={cta} />
     </div>
   );
 }

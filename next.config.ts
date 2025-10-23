@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
         hostname: "plus.unsplash.com",
         pathname: "/**",
       },
+
+      {
+        protocol: "https",
+        hostname: "delightful-trust-ed829e5176.media.strapiapp.com",
+        pathname: "/**",
+      },
     ],
   },
 };
