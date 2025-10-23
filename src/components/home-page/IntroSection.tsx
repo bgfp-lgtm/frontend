@@ -4,7 +4,40 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function IntroSection() {
+// Helper function to create URL-friendly slugs
+const slugify = (text: string) => {
+  return text
+    .toLowerCase()
+    .replace(/ & /g, "-")
+    .replace(/ /g, "-")
+    .replace(/[^\w-]+/g, "");
+};
+
+export default function IntroSection({ data }: any) {
+  // --- Logic for Main Title (title) ---
+  const title = data?.title;
+  const highlight = "UK";
+  if (!title) return null;
+  const parts = title.split(highlight);
+  const before = parts[0];
+  const after = parts.slice(1).join(highlight);
+
+  // --- Logic for Second Title (title2) ---
+  const title2 = data?.title2;
+  const highlight2 = "Empowering Businesses.";
+  const parts2 = title2 ? title2.split(highlight2) : ["", ""];
+  const before2 = parts2[0];
+  const after2 = parts2.slice(1).join(highlight2);
+
+  // --- Logic for Right Description ---
+  const rightDesc = data?.right_description;
+  const rightDescHighlight = "real business success";
+  const rightDescParts = rightDesc
+    ? rightDesc.split(rightDescHighlight)
+    : ["", ""];
+  const rightDescBefore = rightDescParts[0];
+  const rightDescAfter = rightDescParts.slice(1).join(rightDescHighlight);
+
   return (
     <section className="relative w-full overflow-hidden bg-white">
       {/* Dynamic background elements */}
@@ -39,7 +72,7 @@ export default function IntroSection() {
             >
               <span className="h-2 w-2 rounded-full bg-red-600 animate-pulse" />
               <span className="text-sm font-medium text-red-600">
-                Full Spectrum Services
+                {data?.subtitle || "Full Spectrum Services"}
               </span>
             </motion.div>
             <motion.h2
@@ -49,12 +82,11 @@ export default function IntroSection() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              We are the only film production company in the{" "}
+              {before}
               <span className="relative inline-block">
-                <span className="relative z-10">UK</span>
-                {/* <span className="absolute bottom-2 left-0 right-0 h-3 bg-red-600/70 -z-0" /> */}
-              </span>{" "}
-              offering this full spectrum of services
+                <span className="relative z-10">{highlight}</span>
+              </span>
+              {after}
             </motion.h2>
           </div>
 
@@ -73,9 +105,9 @@ export default function IntroSection() {
                     delay: 0.1,
                   }}
                 >
-                  Transforming Stories.{" "}
-                  <span className="text-red-600">Empowering Businesses.</span>{" "}
-                  Driving Growth.
+                  {before2}
+                  <span className="text-red-600">{highlight2}</span>
+                  {after2}
                 </motion.h3>
 
                 <motion.p
@@ -85,9 +117,7 @@ export default function IntroSection() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
                 >
-                  We are a UK-based Film Production, Website & Software
-                  Development, and Marketing Strategy company, dedicated to
-                  helping businesses of all sizes.
+                  {data?.subtitle2}
                 </motion.p>
               </div>
 
@@ -101,9 +131,9 @@ export default function IntroSection() {
                 >
                   <p className="text-gray-700 leading-relaxed text-base">
                     <span className="font-semibold text-gray-900">
-                      Have a small startup?
+                      {data?.ques1}
                     </span>{" "}
-                    We'll help you grow.
+                    {data?.ans1}
                   </p>
                 </motion.div>
                 <motion.div
@@ -115,15 +145,14 @@ export default function IntroSection() {
                 >
                   <p className="text-gray-700 leading-relaxed text-base">
                     <span className="font-semibold text-gray-900">
-                      Manage a global corporation?
+                      {data?.ques2}
                     </span>{" "}
-                    We'll help you make a bigger impact and reach audiences
-                    worldwide.
+                    {data?.ans2}
                   </p>
                 </motion.div>
               </div>
 
-              <Link href={"/projects"}>
+              <Link href={data?.link?.path || "#"}>
                 <motion.button
                   initial="hidden"
                   whileInView="visible"
@@ -132,7 +161,7 @@ export default function IntroSection() {
                   viewport={{ once: true, margin: "-100px" }}
                   className="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-shadow duration-300 inline-flex items-center group"
                 >
-                  View Our Projects
+                  {data?.link?.name || "View Our Projects"}
                   <svg
                     className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200"
                     fill="none"
@@ -166,104 +195,40 @@ export default function IntroSection() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
                 >
-                  From creating impactful stories to building high-performing
-                  digital solutions and executing growth-focused marketing
-                  strategies, we deliver results that drive{" "}
+                  {rightDescBefore}
                   <span className="font-semibold text-red-600">
-                    real business success
+                    {rightDescHighlight}
                   </span>
-                  .
+                  {rightDescAfter}
                 </motion.p>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <Link href={"/film-production"}>
-                    <motion.div
-                      className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "-100px" }}
-                      transition={{
-                        duration: 0.4,
-                        ease: "easeOut",
-                        delay: 0.1,
-                      }}
-                      whileHover={{ y: -4 }}
-                    >
-                      <div className="h-10 w-10 rounded-lg bg-red-600 mb-3 flex items-center justify-center">
-                        <div className="h-5 w-5 border-2 border-white rounded" />
-                      </div>
-                      <p className="font-semibold text-gray-900 text-base mb-1">
-                        Film Production
-                      </p>
-                      <p className="text-gray-500 text-sm">
-                        Concept to final cut
-                      </p>
-                    </motion.div>
-                  </Link>
-                  <Link href={"/software-development"}>
-                    <motion.div
-                      className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "-100px" }}
-                      transition={{
-                        duration: 0.4,
-                        ease: "easeOut",
-                        delay: 0.2,
-                      }}
-                      whileHover={{ y: -4 }}
-                    >
-                      <div className="h-10 w-10 rounded-lg bg-red-600 mb-3 flex items-center justify-center">
-                        <div className="h-5 w-5 border-2 border-white rounded" />
-                      </div>
-                      <p className="font-semibold text-gray-900 text-base mb-1">
-                        Web & Software
-                      </p>
-                      <p className="text-gray-500 text-sm">
-                        Design, build, scale
-                      </p>
-                    </motion.div>
-                  </Link>
-                  <Link href={"/marketing-strategy"}>
-                    <motion.div
-                      className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "-100px" }}
-                      transition={{
-                        duration: 0.4,
-                        ease: "easeOut",
-                        delay: 0.3,
-                      }}
-                      whileHover={{ y: -4 }}
-                    >
-                      <div className="h-10 w-10 rounded-lg bg-red-600 mb-3 flex items-center justify-center">
-                        <div className="h-5 w-5 border-2 border-white rounded" />
-                      </div>
-                      <p className="font-semibold text-gray-900 text-base mb-1">
-                        Marketing Strategy
-                      </p>
-                      <p className="text-gray-500 text-sm">
-                        Reach and conversion
-                      </p>
-                    </motion.div>
-                  </Link>
-                  {/* <motion.div
-                    className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}
-                    whileHover={{ y: -4 }}
-                  >
-                    <div className="h-10 w-10 rounded-lg bg-red-600 mb-3 flex items-center justify-center">
-                      <div className="h-5 w-5 border-2 border-white rounded" />
-                    </div>
-                    <p className="font-semibold text-gray-900 text-base mb-1">
-                      End-to-End Partner
-                    </p>
-                    <p className="text-gray-500 text-sm">One team for growth</p>
-                  </motion.div> */}
+                  {/* Map over the right_block array */}
+                  {data?.right_block?.map((item: any, index: number) => (
+                    <Link href={`/${slugify(item.title)}`} key={item.id}>
+                      <motion.div
+                        className="group p-4 rounded-xl bg-white border border-gray-100 hover:border-red-200 hover:shadow-md transition-all duration-300"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{
+                          duration: 0.4,
+                          ease: "easeOut",
+                          delay: 0.1 + index * 0.1, // Staggered delay
+                        }}
+                        whileHover={{ y: -4 }}
+                      >
+                        <div className="h-10 w-10 rounded-lg bg-red-600 mb-3 flex items-center justify-center">
+                          {/* You can customize this icon */}
+                          <div className="h-5 w-5 border-2 border-white rounded" />
+                        </div>
+                        <p className="font-semibold text-gray-900 text-base mb-1">
+                          {item.title}
+                        </p>
+                        <p className="text-gray-500 text-sm">{item.subtitle}</p>
+                      </motion.div>
+                    </Link>
+                  ))}
                 </div>
               </motion.div>
             </div>

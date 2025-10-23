@@ -1,3 +1,4 @@
+// src/components/layouts/Header.tsx
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,8 +6,20 @@ import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
+import { getStrapiMedia } from "@/lib/utils";
 
-export default function Header() {
+interface HeaderProps {
+  data: {
+    logo: {
+      url: string;
+      name: string;
+    };
+    link: { id: number; name: string; path: string }[];
+    cta: { id: number; name: string; path: string };
+  };
+}
+
+export default function Header({ data }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
@@ -17,20 +30,15 @@ export default function Header() {
     } else {
       document.body.style.overflow = "auto";
     }
-
     return () => {
       document.body.style.overflow = "auto";
     };
   }, [isMenuOpen]);
 
-  const navLinks = [
-    { href: "/", text: "Home" },
-    { href: "/services", text: "Services" },
-    { href: "/about-us", text: "About us" },
-    { href: "/projects", text: "Projects" },
-    { href: "/careers", text: "Careers" },
-    { href: "/blog", text: "Blog Posts" },
-  ];
+  const logoUrl = getStrapiMedia(data?.logo?.url) || "/logo.png";
+  const logoAlt = data?.logo?.name || "logo";
+  const navLinks = data?.link || [];
+  const cta = data?.cta;
 
   const handleLinkClick = () => {
     setIsMenuOpen(false);
@@ -43,42 +51,45 @@ export default function Header() {
       <div className="flex items-center justify-between px-4 sm:px-8 lg:px-20 py-5">
         <Link href={"/"} passHref>
           <Image
-            src={"/logo.png"}
-            alt="logo"
+            src={logoUrl}
+            alt={logoAlt}
             width={130}
             height={130}
             className=""
+            priority
           />
         </Link>
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center justify-center gap-8 xl:gap-10">
           {navLinks.map((link) => {
             const isActive =
-              pathname === link.href ||
-              (link.href.startsWith("#") && pathname === "/");
+              pathname === link.path ||
+              (link.path.startsWith("#") && pathname === "/");
 
             return (
               <Link
-                key={link.text}
-                href={link.href}
+                key={link.id}
+                href={link.path}
                 passHref
                 className={`text-sm transition-colors duration-300 hover:text-red-500 ${
                   isHomePage ? "text-white" : "text-gray-800"
                 } ${isActive ? "font-semibold" : "font-medium"}`}
               >
-                {link.text}
+                {link.name}
               </Link>
             );
           })}
         </nav>
 
-        <Link
-          href="/contact"
-          passHref
-          className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-red-500/20 text-red-600 transition-colors duration-300 hover:bg-red-200 cursor-pointer"
-        >
-          Contact
-        </Link>
+        {cta && (
+          <Link
+            href={cta.path}
+            passHref
+            className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-red-500/20 text-red-600 transition-colors duration-300 hover:bg-red-200 cursor-pointer"
+          >
+            {cta.name}
+          </Link>
+        )}
 
         <div className="lg:hidden">
           <button
@@ -113,32 +124,34 @@ export default function Header() {
 
           {navLinks.map((link) => {
             const isActive =
-              pathname === link.href ||
-              (link.href.startsWith("#") && pathname === "/");
+              pathname === link.path ||
+              (link.path.startsWith("#") && pathname === "/"); // Corrected check for path
 
             return (
               <Link
-                key={link.text}
-                href={link.href}
+                key={link.id}
+                href={link.path}
                 passHref
                 className={`text-2xl text-gray-800 hover:text-red-500 ${
                   isActive ? "font-bold" : "font-semibold"
                 }`}
                 onClick={handleLinkClick}
               >
-                {link.text}
+                {link.name}
               </Link>
             );
           })}
 
-          <Link
-            href="/contact"
-            passHref
-            className="mt-6 inline-flex items-center justify-center px-8 py-4 rounded-xl text-xl font-semibold bg-red-500 text-white transition-colors duration-300 hover:bg-red-600 cursor-pointer"
-            onClick={handleLinkClick}
-          >
-            Contact
-          </Link>
+          {cta && (
+            <Link
+              href={cta.path}
+              passHref
+              className="mt-6 inline-flex items-center justify-center px-8 py-4 rounded-xl text-xl font-semibold bg-red-500 text-white transition-colors duration-300 hover:bg-red-600 cursor-pointer"
+              onClick={handleLinkClick}
+            >
+              {cta.name}
+            </Link>
+          )}
         </div>
       </div>
     </header>

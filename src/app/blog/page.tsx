@@ -2,12 +2,15 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import CTASection from "@/components/CTASection";
-import { getBlogs } from "@/data/loader";
+import { getBlogs, getGlobalData } from "@/data/loader";
 import { StrapiImage } from "@/components/StrapiImage";
 import { FaUser, FaCalendar, FaTag, FaImage } from "react-icons/fa";
 
 export default async function BlogPage() {
   const { data: posts } = await getBlogs();
+
+  const globalresponse = await getGlobalData();
+  const cta = globalresponse?.data?.cta[0];
 
   // Separate featured post (first post) from regular posts
   const featuredPost = posts[0];
@@ -188,7 +191,7 @@ export default async function BlogPage() {
           )}
         </div>
       </div>
-      <CTASection />
+      <CTASection data={cta} />
     </div>
   );
 }
