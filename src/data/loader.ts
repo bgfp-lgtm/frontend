@@ -174,6 +174,15 @@ const globalQuery = qs.stringify({
         card: true,
       },
     },
+    footer: {
+      populate: {
+        socials: true,
+        services: true,
+        company: true,
+        workWith: true,
+        loop: true,
+      },
+    },
   },
 });
 
@@ -304,6 +313,24 @@ const pageBySlugQuery = (slug: string) =>
                         fields: ["url", "name"],
                       },
                     },
+                  },
+                },
+              },
+            },
+          },
+          "blocks.film": {
+            populate: {
+              herosection: {
+                populate: {
+                  video: {
+                    fields: ["url", "name"],
+                  },
+                },
+              },
+              services: {
+                populate: {
+                  image: {
+                    fields: ["url", "name"],
                   },
                 },
               },
