@@ -69,7 +69,7 @@ export default async function ServicesPage() {
                                   subService.image?.url ||
                                   "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963f?q=80&w=1200&auto=format&fit=crop"
                                 }
-                                alt={subService.name}
+                                alt={subService.name || "Service Image"}
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -78,7 +78,7 @@ export default async function ServicesPage() {
                             </div>
                             <div className="p-6">
                               <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                                {subService.name}
+                                {subService.title}
                               </h4>
                               <p className="text-gray-600 text-sm leading-relaxed">
                                 {subService.description}
