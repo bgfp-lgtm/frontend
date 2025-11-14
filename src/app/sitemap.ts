@@ -8,7 +8,7 @@ type BlogPost = {
 };
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://www.yourwebsite.com"; // !<-- REPLACE with your actual domain
+  const baseUrl = "https://www.birthgiverfilmproductions.com"; 
 
   // 1. Get static pages
   const staticRoutes = [
