@@ -1,32 +1,17 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react"; // Removed useEffect
 import { motion } from "framer-motion";
 import CTASection from "@/components/CTASection";
 import VideoModal from "@/components/VideoModal";
 import { getProject } from "@/data/loader";
 
-export default function ProjectPage({ cta }: any) {
-  const [projects, setProjects] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+export default function ProjectPage({ cta, projects }: any) {
+  // const [loading, setLoading] = useState(true); // <- This state is removed
   const [openVideoUrl, setOpenVideoUrl] = useState<string | null>(null);
   const [openTitle, setOpenTitle] = useState<string | undefined>(undefined);
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const { data } = await getProject();
-        setProjects(data || []);
-      } catch (error) {
-        console.error("Error fetching projects:", error);
-        setProjects([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProjects();
-  }, []);
+  console.log(projects);
 
   return (
     <div>
@@ -74,19 +59,23 @@ export default function ProjectPage({ cta }: any) {
             <p className="text-gray-600">Click a project to watch its video.</p>
           </div>
 
-          {loading ? (
+          {/* --- MODIFIED LOGIC --- */}
+          {!projects ? (
+            // Case 1: 'projects' is null or undefined (loading from parent)
             <div className="flex justify-center items-center py-20">
               <div className="text-lg text-gray-600">Loading projects...</div>
             </div>
           ) : projects.length === 0 ? (
+            // Case 2: 'projects' is an empty array
             <div className="flex justify-center items-center py-20">
               <div className="text-lg text-gray-600">
                 No projects available at the moment.
               </div>
             </div>
           ) : (
+            // Case 3: 'projects' has data
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {projects.map((project, index) => {
+              {projects.map((project: any, index: any) => {
                 if (!project.link) return null;
 
                 return (
@@ -98,7 +87,6 @@ export default function ProjectPage({ cta }: any) {
                     }}
                     className="group text-left rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
                   >
-                    {/* The container no longer has a fixed aspect ratio */}
                     <div className="w-full relative bg-black">
                       <img
                         src={project.image.url}
@@ -120,6 +108,7 @@ export default function ProjectPage({ cta }: any) {
               })}
             </div>
           )}
+          {/* --- END MODIFIED LOGIC --- */}
         </div>
       </div>
       <CTASection data={cta} />
