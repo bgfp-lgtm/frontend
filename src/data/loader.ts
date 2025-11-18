@@ -52,18 +52,12 @@ export async function getBlogBySlug(slug: string) {
 const projectQuery = () =>
   qs.stringify(
     {
-      populate: {
-        image: {
-          fields: ["url", "name"],
-        },
-      },
-      pagination: {
-        pageSize: 100,
+    populate: {
+      image: {
+        fields: ["url", "name"],
       },
     },
-    {
-      encodeValuesOnly: true,
-    }
+  }
   );
 
 export async function getProject() {
