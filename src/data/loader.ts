@@ -52,26 +52,27 @@ export async function getBlogBySlug(slug: string) {
 const projectQuery = () =>
   qs.stringify(
     {
-    populate: {
-      image: {
-        fields: ["url", "name"],
+      populate: {
+        image: {
+          fields: ["url", "name"],
+        },
       },
-    },
-  }
+    }
   );
 
-export async function getProject() {
-  const path = "/api/projects";
-  const BASE_URL = getStrapiURL();
-  const url = new URL(path, BASE_URL);
-
-  url.search = projectQuery();
-
-  return await fetchAPI(url.href, {
-    method: "GET",
-    next: { revalidate: 0 },
-  });
-}
+  export async function getProject() {
+    const path = "/api/projects";
+    const BASE_URL = getStrapiURL();
+    const url = new URL(path, BASE_URL);
+  
+    url.search = projectQuery();
+  
+    return await fetchAPI(url.href, {
+      method: "GET",
+      // CHANGED: Set revalidate to 60 (or higher) instead of 0 to enable caching
+      next: { revalidate: 60 }, 
+    });
+  }
 
 const homepageQuery = () =>
   qs.stringify({
