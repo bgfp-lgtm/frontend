@@ -1,17 +1,14 @@
 "use client";
 
-import React, { useState } from "react"; // Removed useEffect
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import CTASection from "@/components/CTASection";
 import VideoModal from "@/components/VideoModal";
-import { getProject } from "@/data/loader";
+import { StrapiImage } from "@/components/StrapiImage"; // Recommend using your StrapiImage component
 
 export default function ProjectPage({ cta, projects }: any) {
-  // const [loading, setLoading] = useState(true); // <- This state is removed
   const [openVideoUrl, setOpenVideoUrl] = useState<string | null>(null);
   const [openTitle, setOpenTitle] = useState<string | undefined>(undefined);
-
-  console.log(projects);
 
   return (
     <div>
@@ -59,48 +56,62 @@ export default function ProjectPage({ cta, projects }: any) {
             <p className="text-gray-600">Click a project to watch its video.</p>
           </div>
 
-          {/* --- MODIFIED LOGIC --- */}
           {!projects ? (
-            // Case 1: 'projects' is null or undefined (loading from parent)
             <div className="flex justify-center items-center py-20">
               <div className="text-lg text-gray-600">Loading projects...</div>
             </div>
           ) : projects.length === 0 ? (
-            // Case 2: 'projects' is an empty array
             <div className="flex justify-center items-center py-20">
               <div className="text-lg text-gray-600">
                 No projects available at the moment.
               </div>
             </div>
           ) : (
-            // Case 3: 'projects' has data
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {projects.map((project: any, index: any) => {
-                if (!project.link) return null;
+              {projects.map((project: any) => {
+                // Check if a link actually exists and is not just whitespace
+                const hasLink = project.link && project.link.trim().length > 0;
 
                 return (
                   <button
                     key={project.id}
+                    // Disable button if no link
+                    disabled={!hasLink}
                     onClick={() => {
-                      setOpenVideoUrl(project.link);
-                      setOpenTitle(project.title);
+                      if (hasLink) {
+                        setOpenVideoUrl(project.link);
+                        setOpenTitle(project.title);
+                      }
                     }}
-                    className="group text-left rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                    className={`group text-left rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ${
+                      hasLink
+                        ? "hover:shadow-md cursor-pointer"
+                        : "cursor-default opacity-80"
+                    }`}
                   >
-                    <div className="w-full relative bg-black">
-                      <img
-                        src={project.image.url}
-                        alt={`${project.title} image`}
-                        className="w-full h-auto object-cover block"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                    <div className="w-full relative bg-black h-64">
+                      {/* Use StrapiImage for better handling of Strapi URLs */}
+                      {project.image?.url ? (
+                         <StrapiImage
+                           src={project.image.url}
+                           alt={`${project.title} image`}
+                           className="w-full h-full object-cover block"
+                         />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-gray-500">No Image</div>
+                      )}
+                      
+                      {/* Only show hover effect if it's clickable */}
+                      {hasLink && (
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                      )}
                     </div>
                     <div className="p-4">
                       <h2 className="text-lg font-semibold text-gray-900">
                         {project.title}
                       </h2>
                       <p className="text-sm text-gray-600">
-                        Tap to watch video.
+                        {hasLink ? "Tap to watch video." : "Coming Soon"}
                       </p>
                     </div>
                   </button>
@@ -108,7 +119,6 @@ export default function ProjectPage({ cta, projects }: any) {
               })}
             </div>
           )}
-          {/* --- END MODIFIED LOGIC --- */}
         </div>
       </div>
       <CTASection data={cta} />
